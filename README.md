@@ -111,6 +111,20 @@ See the `brunch-config.js` for more details.
 
 PR welcome!
 
+## Screenshots
+
+Multilingual menu selection integrated with grails i18n:
+
+![](https://raw.github.com/living-atlases/base-branding/la-base-branding-collectory-i18n.png)
+
+CAS Auth links in drawer (and other configurable links):
+
+![](https://raw.github.com/living-atlases/base-branding/la-base-branding-drawer.png)
+
+ALA BIE autocompletation integrated:
+
+![](https://raw.github.com/living-atlases/base-branding/la-base-sticky-footer-autocomplete.png)
+
 ## License
 
 Apache-2.0 © 2020 [Living Atlases](https://living-atlases.gbif.org)
