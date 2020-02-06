@@ -113,7 +113,7 @@ PR welcome!
 
 ## Screenshots
 
-Multilingual menu selection integrated with grails i18n:
+Multilingual menu selection integrated with `grails` i18n:
 
 ![](https://raw.github.com/living-atlases/base-branding/master/la-base-branding-collectory-i18n.png)
 
@@ -121,7 +121,7 @@ Multilingual menu selection integrated with grails i18n:
 
 ![](https://raw.github.com/living-atlases/base-branding/master/la-base-branding-drawer.png)
 
-ALA Species autocompletion integrated:
+ALA Species autocompletion integrated and sticky footer:
 
 ![](https://raw.github.com/living-atlases/base-branding/master/la-base-sticky-footer-autocomplete.png)
 
