@@ -92,14 +92,19 @@ The `version = 2` will substitute some `::variables::` like login/logout urls in
 
 ### About skin.layouts recommend to use on each ALA modules
 
-In general you should use `main` skin in your ALA modules, except for:
-- `collectory`: use `ala` skin
+In general you should use `main` or `generic` skin in your ALA modules. Some coments:
+
+- `collectory`: `generic` skin layout works well
+- `regions`: `main` skin layout has breadcrumbs and `generic` doesn't (BIE autocomplete fails with both)
+- `species`: `generic` skin layout works well
+- `lists`: `main` skin layout works well, TODO: test `generic` layout
+- `biocache`: `generic` skin layout works well
 
 ## Why brunch?
 
-We can use node modules, ES6 js code, sourcemaps, minimize, development with watch and browser auto reload etc, all this without suffering with gulp configuration.
+With [brunch.io](https://brunch.io) we can use node modules, ES6 js code, sourcemaps, minimize, development with watch and browser auto reload etc, with a more easy configuration than gulp.
 
-We copy the ALA dependencies (jquery, autocomplete, etc)  so we can integrate ALA modules well.
+We copy the ALA dependencies (jquery, autocomplete, etc) via a plugin from the ALA submodule, so we can integrate ALA modules well.
 
 See the `brunch-config.js` for more details.
 
