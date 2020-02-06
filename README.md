@@ -115,15 +115,15 @@ PR welcome!
 
 Multilingual menu selection integrated with grails i18n:
 
-![](https://raw.github.com/living-atlases/base-branding/la-base-branding-collectory-i18n.png)
+![](https://raw.github.com/living-atlases/base-branding/master/la-base-branding-collectory-i18n.png)
 
-CAS Auth links in drawer (and other configurable links):
+`CAS` Authentication links in drawer (and other configurable links):
 
-![](https://raw.github.com/living-atlases/base-branding/la-base-branding-drawer.png)
+![](https://raw.github.com/living-atlases/base-branding/master/la-base-branding-drawer.png)
 
-ALA BIE autocompletation integrated:
+ALA Species autocompletion integrated:
 
-![](https://raw.github.com/living-atlases/base-branding/la-base-sticky-footer-autocomplete.png)
+![](https://raw.github.com/living-atlases/base-branding/master/la-base-sticky-footer-autocomplete.png)
 
 ## License
 
