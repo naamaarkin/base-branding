@@ -127,7 +127,7 @@ ALA Species autocompletion integrated and sticky footer:
 
 ## Caveats
 
-Some peculiarites to take into account:
+Some peculiarities to take into account:
 
 - [ala-cas-5 layout ignores head.html](https://github.com/AtlasOfLivingAustralia/ala-cas-5/issues/29) right now.
 - `collectory` has an old version of `ala-bootstrap3`.
