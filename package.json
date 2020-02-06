@@ -1,0 +1,72 @@
+{
+  "scripts": {
+    "start": "brunch watch --server",
+    "build": "brunch build --production"
+  },
+  "dependencies": {
+    "brunch-browser-sync": "^0.1.2",
+    "domurl": "^2.3.0",
+    "git-digest-brunch": "^1.0.3",
+    "i18next": "^19.1.0",
+    "i18next-browser-languagedetector": "^4.0.1",
+    "i18next-localstorage-cache": "^1.1.1",
+    "i18next-service-backend": "^1.0.5",
+    "i18next-xhr-backend": "^3.2.2",
+    "jquery-i18next": "^1.2.1",
+    "js-cookie": "^2.2.1",
+    "jscc-brunch": "^2.10.0"
+  },
+  "devDependencies": {
+    "auto-reload-brunch": "^2",
+    "babel-brunch": "~6.0",
+    "babel-preset-latest": "^6",
+    "brunch": "^2",
+    "clean-css-brunch": "^2",
+    "copycat-brunch": "^1.1.1",
+    "fs": "^0.0.1-security",
+    "replacement-brunch": "^2.0.5",
+    "uglify-js-brunch": "^2"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "sourceType": "module",
+      "ecmaVersion": 2017,
+      "ecmaFeatures": {
+        "modules": true
+      }
+    },
+    "plugins": [],
+    "extends": [],
+    "env": {
+      "browser": true,
+      "es6": true
+    },
+    "globals": {
+      "expect": false
+    },
+    "ignorePatterns": [
+      "node_modules/"
+    ],
+    "rules": {
+      "import/no-unresolved": 0,
+      "import/no-extraneous-dependencies": 0,
+      "import/extensions": 0,
+      "max-len": 0,
+      "no-alert": 0,
+      "no-console": 0,
+      "no-restricted-globals": 0,
+      "no-return-assign": [
+        "error",
+        "except-parens"
+      ],
+      "comma-dangle": [
+        "error",
+        "never"
+      ],
+      "no-underscore-dangle": "off",
+      "class-methods-use-this": 0,
+      "react/jsx-filename-extension": 0,
+      "react/forbid-prop-types": 0
+    }
+  }
+}
