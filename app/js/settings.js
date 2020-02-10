@@ -3,6 +3,7 @@ module.exports = {
   enabledLangs: ['en', 'es', 'zh'],
   mainDomain: 'l-a.site', // used for cookies (without http/https)
   mainLAUrl: 'https://l-a.site',
+  baseFooterUrl: 'https://l-a.site',
   services: {
     collectory: { url: 'https://collections.l-a.site', title: 'Collections' },
     biocache: { url: 'https://biocache.l-a.site', title: 'Occurrence records' },

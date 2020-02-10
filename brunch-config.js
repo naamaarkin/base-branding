@@ -9,6 +9,12 @@ const toReplace = [/index\.html$/,      // index can be used as your main LA pag
                    /testPage\.html$/,   // testPate is just for text some headings, buttons, etc
                    /testSmall\.html$/]; // testSmall is for test the footer with small contents
 
+const toReplaceOthers = [/banner\.html$/,
+                         /footer\.html$/,
+                         /index\.html$/,      // index can be used as your main LA page
+                         /testPage\.html$/,   // testPate is just for text some headings, buttons, etc
+                         /testSmall\.html$/]; // testSmall is for test the footer with small contents
+
 // Don't add head.html above because this replacement is done by ala-boostrap
 exports.files = {
   javascripts: {
@@ -63,31 +69,34 @@ exports.plugins = {
       { files: toReplace, match: { find: '::headerFooterServer::', replace:
                                    process.env.NODE_ENV === 'development' ?
                                    'http://localhost:3333':
-                                   settings.mainLAUrl }},
-      { files: toReplace, match: { find: '::loginStatus::', replace: 'signedOut' }},
+                                   settings.baseFooterUrl }},
       { files: toReplace, match: { find: '::loginURL::', replace: `${settings.services.cas.url}/cas/login` }},
       { files: toReplace, match: { find: '::logoutURL::', replace: `${settings.services.cas.url}/cas/logout` }},
+      { files: toReplace, match: { find: '::searchServer::', replace: settings.services.bie.url }},
+      { files: toReplace, match: { find: '::searchPath::', replace: '/search'}},
+      { files: toReplace, match: { find: '::centralServer::', replace: settings.mainLAUrl }},
 
       // edit app/js/settings.js before build
-      { files: toReplace, match: { find: '::collectoryURL::', replace: settings.services.collectory.url }},
+      { files: toReplaceOthers, match: { find: '::collectoryURL::', replace: settings.services.collectory.url }},
       { files: toReplace, match: { find: '::datasetsURL::', replace: `${settings.services.collectory.url}/datasets`
       }},
-      { files: toReplace, match: { find: '::biocacheURL::', replace: settings.services.biocache.url }},
-      { files: toReplace, match: { find: '::bieURL::', replace: settings.services.bie.url }},
-      { files: toReplace, match: { find: '::regionsURL::', replace: settings.services.regions.url }},
-      { files: toReplace, match: { find: '::listsURL::', replace: settings.services.lists.url }},
-      { files: toReplace, match: { find: '::spatialURL::', replace: settings.services.spatial.url }},
-      { files: toReplace, match: { find: '::casURL::', replace: settings.services.cas.url }},
-      { files: toReplace, match: { find: '::imagesURL::', replace: settings.services.images.url }},
+      { files: toReplaceOthers, match: { find: '::biocacheURL::', replace: settings.services.biocache.url }},
+      { files: toReplaceOthers, match: { find: '::bieURL::', replace: settings.services.bie.url }},
+      { files: toReplaceOthers, match: { find: '::regionsURL::', replace: settings.services.regions.url }},
+      { files: toReplaceOthers, match: { find: '::listsURL::', replace: settings.services.lists.url }},
+      { files: toReplaceOthers, match: { find: '::spatialURL::', replace: settings.services.spatial.url }},
+      { files: toReplaceOthers, match: { find: '::casURL::', replace: settings.services.cas.url }},
+      { files: toReplaceOthers, match: { find: '::imagesURL::', replace: settings.services.images.url }},
 
-      { files: toReplace, match: { find: '::searchServer::', replace: settings.services.bie.url }},
-      { files: toReplace, match: { find: '::searchPath::', replace: '/search'}}
+      // And just for testing:
+      { files: toReplace, match: { find: '::loginStatus::', replace:  process.env.NODE_ENV === 'development' ? 'signedIn': '::loginStatus::' }}
+
     ]
   },
   // This do some var substition in code also:
   jscc: {
     values: {
-      _LOCALES_URL: process.env.NODE_ENV === 'development' ? 'http://localhost:3333': settings.mainLAUrl
+      _LOCALES_URL: process.env.NODE_ENV === 'development' ? 'http://localhost:3333': settings.baseFooterUrl
     }
   },
   // https://www.npmjs.com/package/brunch-browser-sync
