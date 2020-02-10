@@ -32,6 +32,12 @@ exports.files = {
 
 exports.plugins = {
   // TODO add eslint
+  // This do some var substition in js code:
+  jscc: {
+    values: {
+      _LOCALES_URL: process.env.NODE_ENV === 'development' ? 'http://localhost:3333': settings.baseFooterUrl
+    }
+  },
   babel: {presets: ['latest']},
   copycat: {
     // just copy ALA default builded files to our build
@@ -44,7 +50,7 @@ exports.plugins = {
     verbose : false, // shows each file that is copied to the destination directory
     onlyChanged: true // only copy a file if it's modified time has changed (only effective when using brunch watch)
   },
-  // Maybe use: https://github.com/bmatcuk/html-brunch-static
+  // Maybe replace this plugin by: https://github.com/bmatcuk/html-brunch-static
   replacement: {
     replacements: [
       // Right now this file replacements are only done with `brunch build` and not via the watcher
@@ -65,6 +71,11 @@ exports.plugins = {
         // console.log("Replacing footer");
         return fs.readFileSync('app/assets/footer.html', 'utf8');
       }}},
+
+      // These replacements are done by
+      // https://github.com/AtlasOfLivingAustralia/ala-bootstrap3/blob/grails2/grails-app/taglib/au/org/ala/bootstrap3/HeaderFooterTagLib.groovy#L208
+      // in the ALA modules that uses it (most of them)
+
       { files: toReplace, match: { find: '::containerClass::', replace: 'container' }},
       { files: toReplace, match: { find: '::headerFooterServer::', replace:
                                    process.env.NODE_ENV === 'development' ?
@@ -76,9 +87,13 @@ exports.plugins = {
       { files: toReplace, match: { find: '::searchPath::', replace: '/search'}},
       { files: toReplace, match: { find: '::centralServer::', replace: settings.mainLAUrl }},
 
-      // edit app/js/settings.js before build
+
+      // These other replacements are only done during build time (and are specific for this skin), so see toReplaceOthers var.
+      // Also edit app/js/settings.js before build
+
+
       { files: toReplaceOthers, match: { find: '::collectoryURL::', replace: settings.services.collectory.url }},
-      { files: toReplace, match: { find: '::datasetsURL::', replace: `${settings.services.collectory.url}/datasets`
+      { files: toReplaceOthers, match: { find: '::datasetsURL::', replace: `${settings.services.collectory.url}/datasets`
       }},
       { files: toReplaceOthers, match: { find: '::biocacheURL::', replace: settings.services.biocache.url }},
       { files: toReplaceOthers, match: { find: '::bieURL::', replace: settings.services.bie.url }},
@@ -92,12 +107,6 @@ exports.plugins = {
       { files: toReplace, match: { find: '::loginStatus::', replace:  process.env.NODE_ENV === 'development' ? 'signedIn': '::loginStatus::' }}
 
     ]
-  },
-  // This do some var substition in code also:
-  jscc: {
-    values: {
-      _LOCALES_URL: process.env.NODE_ENV === 'development' ? 'http://localhost:3333': settings.baseFooterUrl
-    }
   },
   // https://www.npmjs.com/package/brunch-browser-sync
   browserSync: {
