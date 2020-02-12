@@ -99,6 +99,8 @@ In general you should use `main` or `generic` skin in your ALA modules. Some com
 - `species`: `generic` skin layout works well
 - `lists`: `main` skin layout works well, TODO: test `generic` layout
 - `biocache`: `generic` skin layout works well
+- `userdetails`: `main` skin layout has breadcrumbs and `generic` doesn't
+- `cas`: `generic` AND `main` skins work well
 
 ## Why brunch?
 
@@ -114,6 +116,7 @@ See the `brunch-config.js` for more details.
 - [ ] use of SASS and better style customization options
 - [ ] Integration of some EU cookie utility like: https://www.npmjs.com/package/@beyonk/gdpr-cookie-consent-banner
 - [ ] LA occurrences, etc stats in index
+- [ ] Add sample `/favicon/{manifest.json|favicon.*}` required by `CAS`
 
 PR welcome!
 
