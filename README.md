@@ -59,8 +59,15 @@ This is using https://brunch.io instead of gulp and using [ALA commonui-bs3-2019
 ### Usage
 
 ```
-# First use
+# First use:
+
+git clone --recurse-submodule https://github.com/living-atlases/base-branding.git
+
+# install yarn with or similar:
+# https://classic.yarnpkg.com/en/docs/install/#debian-stable
+
 yarn install
+npm install -g brunch
 
 # During development
 brunch watch
