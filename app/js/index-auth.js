@@ -7,7 +7,10 @@ const logoutClass = 'signedOut';
 if (document.location.host === settings.mainDomain || document.location.host === 'localhost:3333') {
   if (settings.isDevel) console.log("We are in the main url, let's see if we are authenticated");
   // As this page is plain html, we have to detect if with are authenticated via Cookies
-  let authCookie = Cookies.get(authCookieName);
+  // NOTE: For make this work you need ala.cookie.httpOnly to false in /data/cas/config/application.yml
+  // We should use another way to see if it's authenticated
+
+  let authCookie = Cookies.get(authCookieName, { domain: settings.mainDomain, path: '/' });
   var in30Minutes = 1/48;
 
   if (typeof authCookie === 'undefined' && settings.isDevel) {
