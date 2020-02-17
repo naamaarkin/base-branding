@@ -14,5 +14,9 @@
   "nav.spatial": "Portal Espacial",
   "nav.searchbox": "Buscar especies, juegos de datos y más...",
   "index.slogan": "Datos Nacionales de Biodiversidad Libres apoyando nuestras Acciones Medioambientales",
-  "index.search-btn": "Buscar"
+  "index.search-btn": "Buscar",
+  "error.title": "¡Uuppps, vaya!",
+  "error.subtitle": "Estamos experimentando algunos problemas en nuestro servicio",
+  "error.description": "Si lo necesita, siempre puede contactarnos, de lo contrario, volveremos a estar online en breve",
+  "error.button": "Ir al Inicio"
 }

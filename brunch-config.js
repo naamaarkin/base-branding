@@ -6,6 +6,7 @@
 const fs = require('fs');
 const settings = require('./app/js/settings.js');
 const toReplace = [/index\.html$/,      // index can be used as your main LA page
+                   /errorPage\.html/,    // An error page that can be used in your infrastructure
                    /testPage\.html$/,   // testPate is just for text some headings, buttons, etc
                    /testSmall\.html$/]; // testSmall is for test the footer with small contents
 

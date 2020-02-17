@@ -1,5 +1,6 @@
 module.exports = {
   isDevel: true,
+  inMante: false, // set to true and deploy if you want to set a maintenance message in all the services
   enabledLangs: ['en', 'es', 'zh'],
   mainDomain: 'l-a.site', // used for cookies (without http/https)
   mainLAUrl: 'https://l-a.site',

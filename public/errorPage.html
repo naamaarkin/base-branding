@@ -1,8 +1,7 @@
 <!doctype html>
-<html lang="en">
+<html lang="es-ES">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8"/>
         <!-- ALA dependencies (loaded by grails modules) -->
     <!-- During development of local html pages (like the main index) we need to load them -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -37,9 +36,8 @@
 <!-- End included head -->
 
   </head>
-  <body onload="focusScroll()">
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-      <!-- We add this here instead of in head because it seems that CAS doesn't load head.html -->
+  <body>
+    <!-- We add this here instead of in head because it seems that CAS doesn't load head.html -->
 <!-- Optional: Material Design Lite Page styles -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -100,10 +98,10 @@
       <div class="la-navigation-container">
         <nav class="la-navigation mdl-navigation">
 
-          <a data-i18n="nav.collectory" class="mdl-navigation__link mdl-typography--text-uppercase" href="https://collections.l-a.site"></a>
-          <a data-i18n="nav.biocache" class="mdl-navigation__link mdl-typography--text-uppercase" href="https://biocache.l-a.site"></a>
-          <a data-i18n="nav.datasets" class="mdl-navigation__link mdl-typography--text-uppercase" href="https://collections.l-a.site/datasets"></a>
-          <a data-i18n="nav.your-area" class="mdl-navigation__link mdl-typography--text-uppercase" href="https://biocache.l-a.site/explore/your-area/"></a>
+          <a data-i18n="nav.collectory" class="mdl-navigation__link mdl-typography--text-uppercase" href="::collectoryURL::"></a>
+          <a data-i18n="nav.biocache" class="mdl-navigation__link mdl-typography--text-uppercase" href="::biocacheURL::"></a>
+          <a data-i18n="nav.datasets" class="mdl-navigation__link mdl-typography--text-uppercase" href="::collectoryURL::/datasets"></a>
+          <a data-i18n="nav.your-area" class="mdl-navigation__link mdl-typography--text-uppercase" href="::biocacheURL::/explore/your-area/"></a>
 
         </nav>
       </div>
@@ -131,18 +129,18 @@
     </span>
     <nav id="drawer-nav-menu" class="mdl-navigation ::loginStatus::">
       <a data-i18n="nav.login" class="mdl-navigation__link loginBtn" href="https://auth.l-a.site/cas/login"></a>
-      <a data-i18n="nav.myprofile" class="mdl-navigation__link myProfileBtn" href="https://auth.l-a.site/userdetails/myprofile/"></a>
+      <a data-i18n="nav.myprofile" class="mdl-navigation__link myProfileBtn" href="::casURL::/userdetails/myprofile/"></a>
       <a data-i18n="nav.logout" class="mdl-navigation__link logoutBtn" href="https://auth.l-a.site/cas/logout"></a>
-      <a data-i18n="nav.create-account" class="mdl-navigation__link signUpBtn" href="https://auth.l-a.site/userdetails/registration/createAccount"></a>
+      <a data-i18n="nav.create-account" class="mdl-navigation__link signUpBtn" href="::casURL::/userdetails/registration/createAccount"></a>
       <div class="la-drawer-separator"></div>
-      <a data-i18n="nav.collectory" class="mdl-navigation__link" href="https://collections.l-a.site"></a>
-      <a data-i18n="nav.biocache" class="mdl-navigation__link" href="https://biocache.l-a.site"></a>
-      <a data-i18n="nav.species" class="mdl-navigation__link" href="https://especies.gbif.es"></a>
-      <a data-i18n="nav.regions" class="mdl-navigation__link" href="https://regions.l-a.site"></a>
-      <a data-i18n="nav.species-lists" class="mdl-navigation__link" href="https://lists.l-a.site"></a>
-      <a data-i18n="nav.datasets" class="mdl-navigation__link" href="https://collections.l-a.site/datasets"></a>
-      <a data-i18n="nav.images" class="mdl-navigation__link" href="https://images.l-a.site"></a>
-      <a data-i18n="nav.spatial" class="mdl-navigation__link" href="https://spatial.l-a.site"></a>
+      <a data-i18n="nav.collectory" class="mdl-navigation__link" href="::collectoryURL::"></a>
+      <a data-i18n="nav.biocache" class="mdl-navigation__link" href="::biocacheURL::"></a>
+      <a data-i18n="nav.species" class="mdl-navigation__link" href="::bieURL::"></a>
+      <a data-i18n="nav.regions" class="mdl-navigation__link" href="::regionsURL::"></a>
+      <a data-i18n="nav.species-lists" class="mdl-navigation__link" href="::listsURL::"></a>
+      <a data-i18n="nav.datasets" class="mdl-navigation__link" href="::datasetsURL::"></a>
+      <a data-i18n="nav.images" class="mdl-navigation__link" href="::imagesURL::"></a>
+      <a data-i18n="nav.spatial" class="mdl-navigation__link" href="::spatialURL::"></a>
     </nav>
   </div>
   <div class="container" id="autocompleteSearchALA" class="collapse">
@@ -171,18 +169,28 @@
     <div class="la-main-content">
       <a name="top"></a>
 
-      <!-- main content -->
-      <div class="la-customized-section">
-          <div class="la-customized-section-text">
-            <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
-            <p class="mdl-typography--font-light">
-              河菌警趣長使東末伸予広封。暮加美施法半禁遺使下男将朝巡災若転宮弾稿。氷少提月市歯集主南裏邦先流市振。園記応九面図光図菱遣基日県在覧。
-              <br>
-              <a href="" class="la-link mdl-typography--font-light">Just testing non latin characters</a>
-            </p>
+    <script>require('js/settings').inMante=false;</script>
+    <div id="mante-container" class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="error-template">
+            <h1 data-i18n="error.title"></h1>
+            <h2 data-i18n="error.subtitle"></h2>
+            <div>
+              <p data-i18n="error.description"></p>
+            </div>
+            <div class="error-actions">
+              <a data-i18n="error.button" href="${settings.mainLAUrl}" style="margin-top: 10px;" class="btn btn-primary btn-lg"></a>
+            </div>
           </div>
         </div>
-        <!-- Footer -->
+        <div class="col-md-6">
+          <img src="images/error.svg" alt="Error Image" onerror="this.onerror=null; this.src='images/error.png'">
+        </div>
+      </div>
+    </div>
+    </div>
+    <!-- Footer -->
 <!-- TODO: Add sticky footer for small contents -->
 </div>
 <div class="la-footer-content">

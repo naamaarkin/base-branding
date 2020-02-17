@@ -80,6 +80,7 @@ brunch build --production
 Test with:
 - http://localhost:3333/
 - http://localhost:3333/testPage.html
+- http://localhost:3333/errorPage.html
 
 ## Deployment and ALA configuration
 
@@ -119,13 +120,14 @@ See the `brunch-config.js` for more details.
 
 ## TODO
 
+- [x] Add error page
 - [ ] Nowadays, during development, if you modify the head/footer/banner you need an extra manual `brunch build` to update well your index and testPage with your changes. We have to find a better way to replace the HEADER, BANNER etc. See `brunch-config.js` plugins for more details.
 - [ ] use of SASS and better style customization options
 - [ ] Integration of some EU cookie utility like: https://www.npmjs.com/package/@beyonk/gdpr-cookie-consent-banner
 - [ ] LA occurrences, etc stats in index
 - [ ] Add sample `/favicon/{manifest.json|favicon.*}` required by `CAS`
 
-PR welcome!
+Pull Request welcome!
 
 ## Screenshots
 
@@ -140,6 +142,25 @@ Multilingual menu selection integrated with `grails` i18n:
 ALA Species autocompletion integrated and sticky footer:
 
 ![](https://raw.github.com/living-atlases/base-branding/master/la-base-sticky-footer-autocomplete.png)
+
+Error page
+
+![](https://raw.github.com/living-atlases/base-branding/master/error-page.png)
+
+## Error pages
+
+You can enable a error banner in `js/settings` variable `inMante` to `true` that will visible in all the LA modules using this skin.
+
+Also you can configure a error page in your nginx proxy, for instance:
+
+```
+error_page 503 https://l-a.site/errorPage.html;
+```
+or in Apache:
+
+```
+ErrorDocument 503 https://l-a.site/errorPage.html, for instance;
+```
 
 ## Caveats
 

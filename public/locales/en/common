@@ -14,5 +14,9 @@
   "nav.spatial": "Spatial Portal",
   "nav.searchbox": "Search species, datasets, and more...",
   "index.slogan": "Free National Biodiversity Data Supporting our Environmental Actions",
-  "index.search-btn": "Search"
+  "index.search-btn": "Search",
+  "error.title": "Ops!",
+  "error.subtitle": "We are experiencing some problems in our services",
+  "error.description": "If you need to you can always contact us, otherwise we’ll be back online shortly!",
+  "error.button": "Go to our homepage"
 }
