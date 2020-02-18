@@ -143,7 +143,7 @@ ALA Species autocompletion integrated and sticky footer:
 
 ![](https://raw.github.com/living-atlases/base-branding/master/la-base-sticky-footer-autocomplete.png)
 
-Error page
+Error page:
 
 ![](https://raw.github.com/living-atlases/base-branding/master/error-page.png)
 

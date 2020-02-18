@@ -622,3 +622,7 @@ h6,p {
 #main_biosearch_form > div {
   margin: 0 50px;
 }
+
+.mdl-layout-title > a:hover {
+  text-decoration: none;
+}
