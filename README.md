@@ -85,8 +85,8 @@ Test with:
 ## Deployment and ALA configuration
 
 ```
-brunch build --production
-rsync -a --delete public/ l-a.site:/srv/l-a.site/www/test-skin/
+brunch build --production && rsync -a --delete --info=progress2 public/ tanbif-base:/srv/tanbif.ditnet.ac.tz/www/tz-ui-2020/
+
 ```
 
 And in your inventories:
