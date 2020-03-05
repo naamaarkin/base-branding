@@ -85,7 +85,7 @@ Test with:
 ## Deployment and ALA configuration
 
 ```
-brunch build --production && rsync -a --delete --info=progress2 public/ tanbif-base:/srv/tanbif.ditnet.ac.tz/www/tz-ui-2020/
+brunch build --production && rsync -a --delete --info=progress2 public/ tanbif-base:/srv/tanbif.ditnet.ac.tz/www/tz-ui-2020-freshwater/
 
 ```
 

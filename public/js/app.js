@@ -398,7 +398,7 @@ module.exports = {
   enabledLangs: ['en', 'sw'],
   mainDomain: 'tanbif.ditnet.ac.tz', // used for cookies (without http/https)
   mainLAUrl: 'https://tanbif.ditnet.ac.tz',
-  baseFooterUrl: 'https://tanbif.ditnet.ac.tz/tz-ui-2020',
+  baseFooterUrl: 'https://tanbif.ditnet.ac.tz/tz-ui-2020-freshwater',
   services: {
     collectory: { url: 'https://collections.tanbif.ditnet.ac.tz', title: 'Collections' },
     biocache: { url: 'https://records.tanbif.ditnet.ac.tz', title: 'Occurrence records' },
