@@ -184,7 +184,6 @@ a.mdl-navigation__link:hover {
 
 .la-create-character {
   font-size: 21px;
-  padding-top: 400px;
 }
 
 .la-create-character a {
@@ -464,7 +463,6 @@ a.mdl-navigation__link:hover {
   }
 
   .la-create-character {
-    padding-top: 200px;
     font-size: 16px;
   }
 
@@ -625,4 +623,70 @@ h6,p {
 
 .mdl-layout-title > a:hover {
   text-decoration: none;
+}
+
+/* stats */
+
+.index-stats {
+  padding-top: 100px;
+}
+
+.stats-group {
+  background: rgb(0,0,0,0.25);
+}
+
+.stats-title {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.stats-value {
+  font-size: 26px;
+  font-weight: 500;
+}
+
+.stats-item {
+  color: white;
+  min-height: 26px;
+  padding: 0 10px;
+}
+
+#main_biosearch_label > div,
+#main_biosearch_form > div > div.form-group {
+  margin-top: 10px;
+}
+
+
+/**** Mobile layout ****/
+@media (max-width: 900px) {
+  .index-stats {
+    margin: 0px;
+    padding: 10px 0 0 0;
+  }
+
+  .index-search {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .stats-title {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .stats-value {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .stats-item {
+    color: white;
+    min-height: 20px;
+    padding: 0 10px;
+  }
+
+  #main_biosearch_label > div,
+  #main_biosearch_form > div > div.form-group {
+    margin-top: 5px;
+  }
 }

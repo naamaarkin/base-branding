@@ -6,14 +6,16 @@ module.exports = {
   mainLAUrl: 'https://freshwater.sua.ac.tz',
   baseFooterUrl: 'https://tanbif.ditnet.ac.tz/tz-ui-2020-freshwater',
   services: {
-    collectory: { url: 'https://collections.tanbif.ditnet.ac.tz', title: 'Collections' },
-    biocache: { url: 'https://freshwater.sua.ac.tz', title: 'Occurrence records' },
-    bie: { url: 'https://species.tanbif.ditnet.ac.tz', title: 'Species' },
-    regions: { url: 'https://regions.tanbif.ditnet.ac.tz', title: 'Regions' },
-    lists: { url: 'https://lists.tanbif.ditnet.ac.tz', title: 'Species List' },
-    spatial: { url: 'https://spatial.tanbif.ditnet.ac.tz', title: 'Spatial Portal' },
-    images: { url: 'https://images.tanbif.ditnet.ac.tz', title: 'Images Service' },
-    cas: { url: 'https://auth.tanbif.ditnet.ac.tz', title: 'CAS' }
+    collectory: { url: 'https://collections.l-a.site', title: 'Collections' },
+    biocache: { url: 'https://biocache.l-a.site', title: 'Occurrence records' },
+    biocacheService: { url: 'https://biocache-ws.l-a.site', title: 'Occurrence records webservice' },
+    bie: { url: 'https://especies.gbif.es', title: 'Species' },
+    bieDis: { url: 'https://species.l-a.site', title: 'Species' },
+    regions: { url: 'https://regions.l-a.site', title: 'Regions' },
+    lists: { url: 'https://lists.l-a.site', title: 'Species List' },
+    spatial: { url: 'https://spatial.l-a.site', title: 'Spatial Portal' },
+    images: { url: 'https://images.l-a.site', title: 'Images Service' },
+    cas: { url: 'https://auth.l-a.site', title: 'CAS' }
   },
   otherLinks: [
     { title: 'Datasets', url: 'https://collections.tanbif.ditnet.ac.tz/datasets' },
