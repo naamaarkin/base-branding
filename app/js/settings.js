@@ -1,10 +1,10 @@
 module.exports = {
   isDevel: true,
   inMante: false, // set to true and deploy if you want to set a maintenance message in all the services
-  enabledLangs: ['en', 'sw'],
-  mainDomain: 'freshwater.sua.ac.tz', // used for cookies (without http/https)
-  mainLAUrl: 'https://freshwater.sua.ac.tz',
-  baseFooterUrl: 'https://tanbif.ditnet.ac.tz/tz-ui-2020-freshwater',
+  enabledLangs: ['en', 'es', 'zh', 'sw'],
+  mainDomain: 'l-a.site', // used for cookies (without http/https)
+  mainLAUrl: 'https://l-a.site',
+  baseFooterUrl: 'https://l-a.site',
   services: {
     collectory: { url: 'https://collections.l-a.site', title: 'Collections' },
     biocache: { url: 'https://biocache.l-a.site', title: 'Occurrence records' },
@@ -18,9 +18,9 @@ module.exports = {
     cas: { url: 'https://auth.l-a.site', title: 'CAS' }
   },
   otherLinks: [
-    { title: 'Datasets', url: 'https://collections.tanbif.ditnet.ac.tz/datasets' },
-    { title: 'Explore your area', url: 'http://records.tanbif.ditnet.ac.tz/explore/your-area/' },
-    { title: 'Datasets', url: 'https://collections.tanbif.ditnet.ac.tz/datasets' },
+    { title: 'Datasets', url: 'https://collections.l-a.site/datasets' },
+    { title: 'Explore your area', url: 'http://biocache.l-a.site/explore/your-area/' },
+    { title: 'Datasets', url: 'https://collections.l-a.site/datasets' },
     { title: 'twitter', url: '', icon: 'twitter' }
   ]
 }
