@@ -131,6 +131,10 @@ Pull Request welcome!
 
 ## Screenshots
 
+Home page with stats:
+
+![](https://raw.github.com/living-atlases/base-branding/master/la-base-index.png)
+
 Multilingual menu selection integrated with `grails` i18n:
 
 ![](https://raw.github.com/living-atlases/base-branding/master/la-base-branding-collectory-i18n.png)
