@@ -365,8 +365,7 @@ require('./settings.js').default;
 require('./index-auth.js');
 require('./i18next-config.js');
 require('./mante.js');
-
-// require('./stats.js');
+require('./stats.js');
 
 document.addEventListener('DOMContentLoaded', function () {
   console.log('LA skin initialized');
@@ -396,24 +395,95 @@ module.exports = {
   isDevel: true,
   inMante: false, // set to true and deploy if you want to set a maintenance message in all the services
   enabledLangs: ['en', 'sw'],
-  mainDomain: 'tanbif.ditnet.ac.tz', // used for cookies (without http/https)
-  mainLAUrl: 'https://tanbif.ditnet.ac.tz',
+  mainDomain: 'freshwater.sua.ac.tz', // used for cookies (without http/https)
+  mainLAUrl: 'https://freshwater.sua.ac.tz',
   baseFooterUrl: 'https://tanbif.ditnet.ac.tz/tz-ui-2020-freshwater',
   services: {
-    collectory: { url: 'https://collections.tanbif.ditnet.ac.tz', title: 'Collections' },
-    biocache: { url: 'https://records.tanbif.ditnet.ac.tz', title: 'Occurrence records' },
-    bie: { url: 'https://species.tanbif.ditnet.ac.tz', title: 'Species' },
-    regions: { url: 'https://regions.tanbif.ditnet.ac.tz', title: 'Regions' },
-    lists: { url: 'https://lists.tanbif.ditnet.ac.tz', title: 'Species List' },
-    spatial: { url: 'https://spatial.tanbif.ditnet.ac.tz', title: 'Spatial Portal' },
-    images: { url: 'https://images.tanbif.ditnet.ac.tz', title: 'Images Service' },
-    cas: { url: 'https://auth.tanbif.ditnet.ac.tz', title: 'CAS' }
+    collectory: { url: 'https://collections.l-a.site', title: 'Collections' },
+    biocache: { url: 'https://biocache.l-a.site', title: 'Occurrence records' },
+    biocacheService: { url: 'https://biocache-ws.l-a.site', title: 'Occurrence records webservice' },
+    bie: { url: 'https://especies.gbif.es', title: 'Species' },
+    bieDis: { url: 'https://species.l-a.site', title: 'Species' },
+    regions: { url: 'https://regions.l-a.site', title: 'Regions' },
+    lists: { url: 'https://lists.l-a.site', title: 'Species List' },
+    spatial: { url: 'https://spatial.l-a.site', title: 'Spatial Portal' },
+    images: { url: 'https://images.l-a.site', title: 'Images Service' },
+    cas: { url: 'https://auth.l-a.site', title: 'CAS' }
   },
   otherLinks: [{ title: 'Datasets', url: 'https://collections.tanbif.ditnet.ac.tz/datasets' }, { title: 'Explore your area', url: 'http://records.tanbif.ditnet.ac.tz/explore/your-area/' }, { title: 'Datasets', url: 'https://collections.tanbif.ditnet.ac.tz/datasets' }, { title: 'twitter', url: '', icon: 'twitter' }]
 };
 });
 
-;require.alias("process/browser.js", "process");process = require('process');require.register("___globals___", function(exports, require, module) {
+;require.register("js/stats.js", function(exports, require, module) {
+'use strict';
+
+var settings = require('./settings');
+// FIXME var { locale } = require('./i18n_init');
+
+var _require = require('countup.js'),
+    CountUp = _require.CountUp;
+
+var collectory = settings.services.collectory.url;
+var biocacheService = settings.services.biocacheService.url;
+
+var setCounter = function setCounter(id, val, onEnd) {
+  var options = {
+    separator: ',', // FIXME  locale === 'en' ? ',': '.',
+    duration: 1
+  };
+  // If testing set some dummy value
+  if (val === 0 && settings.isDevel) {
+    val = 123456;
+  }
+  options.startVal = Math.round(val - val * 4 / 100); // we increment only a %
+  console.log('Start val ' + options.startVal + ' to ' + val);
+  var countUp = new CountUp(id, val, options);
+  if (!countUp.error) {
+    countUp.start(function () {
+      $('#' + id).addClass('loaded_stats');if (typeof onEnd !== 'undefined') onEnd();
+    });
+  } else {
+    console.error(countUp.error);
+  }
+};
+
+var getStats = function getStats(url, callback) {
+  if (settings.isDevel) {
+    if (url.indexOf('species') > -1) callback([{ count: 10402 }]);else callback({ totalRecords: 86965283, total: 12922 });
+  } else {
+    // Real call in production
+    $.getJSON(url, callback);
+  }
+};
+
+// If you want to show collections stats:
+// `${collectory}/ws/dataResource/count`
+var loadStats = function loadStats() {
+  getStats(biocacheService + '/occurrences', function (data) {
+    setCounter('stats_occurrences', data.totalRecords, function () {
+      return getStats(collectory + '/ws/dataResource/count', function (data) {
+        setCounter('stats_datasets', data.total, function () {
+          return getStats(collectory + '/ws/institution/count', function (data) {
+            setCounter('stats_institutions', data.total);
+          });
+        });
+      });
+    });
+  });
+  // Right now this is slow so we put here
+  getStats(biocacheService + '/occurrence/facets?q=*:*&facets=species&pageSize=0', function (data) {
+    setCounter("stats_species", data[0].count);
+  });
+};
+
+document.addEventListener("DOMContentLoaded", function () {
+  if (document.location.host === settings.mainLAUrl || document.location.host === 'localhost:3333' || settings.isDevel) {
+    loadStats();
+  }
+});
+});
+
+require.alias("process/browser.js", "process");process = require('process');require.register("___globals___", function(exports, require, module) {
   
 });})();require('___globals___');
 

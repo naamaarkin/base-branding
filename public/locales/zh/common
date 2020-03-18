@@ -15,5 +15,9 @@
   "nav.spatial": "空间门户",
   "nav.searchbox": "搜索物种，数据集等",
   "index.slogan": "免费的国家生物多样性数据支持我们的环境行动",
-  "index.search-btn": "搜索"
+  "index.search-btn": "搜索",
+  "index.stats.occurrences": "发生记录",
+  "index.stats.datasets": "数据集",
+  "index.stats.institutions": "机构",
+  "index.stats.species": "种类"
 }
