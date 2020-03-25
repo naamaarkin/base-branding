@@ -102,7 +102,7 @@ The `version = 2` will substitute some `::variables::` like login/logout urls in
 
 In general you should use `main` or `generic` skin in your ALA modules. Some coments:
 
-- `collectory`: `generic` skin layout works well
+- `collectory`: `ala` skin layout works better than `generic`
 - `regions`: `main` skin layout has breadcrumbs and `generic` doesn't (BIE autocomplete fails with both)
 - `species`: `generic` skin layout works well
 - `lists`: `main` skin layout works well, TODO: test `generic` layout
