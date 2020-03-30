@@ -85,7 +85,7 @@ Test with:
 ## Deployment and ALA configuration
 
 ```
-brunch build --production && rsync -a --delete --info=progress2 public/ tanbif-base:/srv/tanbif.ditnet.ac.tz/www/tz-ui-2020-freshwater/
+brunch build --production && rsync -a --delete --info=progress2 public/ your-server:/srv/your-server-domain/www/test-skin/
 
 ```
 
@@ -97,6 +97,8 @@ header_and_footer_version = 2
 ```
 
 The `version = 2` will substitute some `::variables::` like login/logout urls in your `head/banner/footer.html` in production. This is also done in `index.html` and during development with the `app/js/settings.js` values. See [ala-bootstrap3 HeaderFotterTagLib.groovy ](https://github.com/AtlasOfLivingAustralia/ala-bootstrap3/blob/351067716c685dc9a896d0a57abd1b4afdfaee39/grails-app/taglib/au/org/ala/bootstrap3/HeaderFooterTagLib.groovy#L218) for more details. Use the appropriate skin (see below).
+
+More information about [rsync and scp directories here](https://www.joeldare.com/wiki/copy_a_directory_recursively_using_scp).
 
 ### About skin.layouts recommend to use on each ALA modules
 
