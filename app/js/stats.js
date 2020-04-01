@@ -55,8 +55,9 @@ var loadStats = () => {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  if (document.location.host === settings.mainLAUrl || document.location.host === 'localhost:3333'
-      || settings.isDevel ) {
+  if ((document.location.host === settings.mainLAUrl || document.location.host === 'localhost:3333'
+    || settings.isDevel ) && document.location.pathname === '/' ) {
+    // only load stats on /
     loadStats();
   }
 });
