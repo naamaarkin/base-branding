@@ -105,6 +105,7 @@ i18n.on('languageChanged', function (lng) {
   }
 });
 
+(function($) {
 i18n.use(backend)
     .use(lngDetector)
     .use(cache)
@@ -115,7 +116,8 @@ i18n.use(backend)
         return;
       }
       console.log(`Language initialized: ${i18n.language}`);
-      jqueryI18next.init(i18n, $);
+      jqueryI18next.init(i18n, $, { i18nName: 'i18next' } );
+      console.log('jquery i18next initialized');
       $("body").localize();
 
       $('.locale-link').on('click', function(e) {
@@ -156,3 +158,4 @@ i18n.use(backend)
        */
       // CookieConsent.init(cookiesOpt);
     });
+}(jQuery));
