@@ -55,7 +55,7 @@ var loadStats = () => {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  if ((document.location.host === settings.mainLAUrl || document.location.host === 'localhost') && document.location.pathname === '/' ) {
+  if ((document.location.origin === settings.mainLAUrl || document.location.host === 'localhost') && document.location.pathname === '/' ) {
     // only load stats on /
     loadStats();
   }

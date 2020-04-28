@@ -5,7 +5,7 @@ const loginClass = 'signedIn';
 const logoutClass = 'signedOut';
 
 var mainDrawerLoginStatusInIndex = () => {
-  if ((document.location.host === settings.mainLAUrl || document.location.host === 'localhost:3333') && document.location.pathname === '/' ) {
+  if ((document.location.origin === settings.mainLAUrl || document.location.host === 'localhost:3333') && document.location.pathname === '/' ) {
     if (settings.isDevel) console.log("We are in the main url, let's see if we are authenticated");
     // As this page is plain html, we have to detect if with are authenticated via Cookies
     // NOTE: For make this work you need ala.cookie.httpOnly to false in /data/cas/config/application.yml
