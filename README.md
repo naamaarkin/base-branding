@@ -106,13 +106,16 @@ More information about [rsync and scp directories here](https://www.joeldare.com
 
 In general you should use `main` or `generic` skin in your ALA modules. Some coments:
 
-- `collectory`: `ala` skin layout works better than `generic`
-- `regions`: `main` skin layout has breadcrumbs and `generic` doesn't (BIE autocomplete fails with both)
-- `species`: `generic` skin layout works well
-- `lists`: `main` skin layout works well, TODO: test `generic` layout
-- `biocache`: `generic` skin layout works well
-- `userdetails`: `main` skin layout has breadcrumbs and `generic` doesn't
-- `cas`: `generic` AND `main` skins work well
+- `collectory`: `ala` skin layout works well
+- `species`: `ala` skin layout works well
+- `regions`: `main` skin layout works well
+- `bie-index`: `main` skin layout works well
+- `lists`: `main` skin layout works well
+- `images`: `main` skin layout works well
+- `biocache`: `ala` skin layout works well
+- `userdetails`: `ala-main` skin layout works well
+
+[Here you have a table of skin layouts recommended](https://docs.google.com/spreadsheets/d/19rs1GuxZX2tRfm2x8YYf83fAcBrIG1gObIqVOV6C870/edit?usp=sharing), variables names, layouts used by ALA, links to code, etc.
 
 ## Why brunch?
 
