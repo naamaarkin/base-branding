@@ -690,3 +690,6 @@ h6,p {
     margin-top: 5px;
   }
 }
+
+/* See: https://stackoverflow.com/a/45045071 */
+.modal-backdrop {z-index: 0;}
