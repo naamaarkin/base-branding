@@ -22,6 +22,8 @@ If you only want to do minor style changes, have a look to `app/css/material-cus
 
 This styling is not the most important work of this branding, but instead the integration with ALA and the brunch configuration that gives you the possibility to use modern javascript code and modern libraries or use `i18next`, for example.
 
+We have also a [clean branch](https://github.com/living-atlases/base-branding/tree/clean-skin) with only minor BS3 styling. This is useful when you already have a css/html style (for instance of your blog or main site) that you want to integrate with the new LA portal. See its [screenshots](https://github.com/living-atlases/base-branding/tree/clean-skin#screenshots).
+
 ## Structure
 
 ```
@@ -175,8 +177,7 @@ ErrorDocument 503 https://l-a.site/errorPage.html, for instance;
 
 ## Caveats
 
-Some peculiarities to take into account:
-
+- If this header/footer/etc are used from `subdomains.your.l-a.site` you can not use relative urls. You should use like `https://your.l-a.site/img/someResource.png` instead of `img/someResource.png`. If you don't use absolute urls, `collectory` will try to access to `img/someResource.png` in their tomcat without success with `404` errors, and the same with the rest of tools.
 - [ala-cas-5 layout ignores head.html](https://github.com/AtlasOfLivingAustralia/ala-cas-5/issues/29) right now.
 - `collectory` has an old version of `ala-bootstrap3`.
 
