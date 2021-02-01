@@ -27,7 +27,13 @@
       </div>
       <p class="mdl-typography--font-light">Licence:</p>
       <p class="mdl-typography--font-light">
-        © 2020 Wakanda National Biodiversity Office
+        © 2020-<span id="footer-copyright"
+          ><script>
+            document
+              .getElementById("footer-copyright")
+              .appendChild(document.createTextNode(new Date().getFullYear()));
+          </script> </span
+        >Wakanda National Biodiversity Office
       </p>
     </div>
 
