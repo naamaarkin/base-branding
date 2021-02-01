@@ -14,15 +14,14 @@ You can use this as a basis for a new LA infrastructure branding or just to see 
 
 ALA uses Bootstrap version 3 in most of their modules.
 
-Additionally we use:
-- Material Design Lite https://getmdl.io/ with a custom theme that you can https://getmdl.io/customize/index.html change, download and put instead of `app/css/material.min.css`.
-Anyway you can drop any of these last dependencies and create your header/footer from scratch with your own style. See `app/assets/head*.html` for more details.
+This branding has currently several themes in `app/themes`. One is `clean` Boostrap 3 theme that you can easy adapt to your site needs. This is useful when you already have a css/html style (for instance of your blog or main site) that you want to integrate with the new LA portal. 
+
+Additionally we have a material-bootstrap theme `app/themes/material` as a sample of how to do a different look&feel to a LA portal. This theme uses:
+- Material Design Lite https://getmdl.io/ with a custom theme that you can https://getmdl.io/customize/index.html change, download and put instead of `app/themes/material/css/material.min.css`.
 - And experimentally also [Material Bootstrap Design](https://github.com/FezVrasta/bootstrap-material-design) to have similar style in the ALA modules.
-If you only want to do minor style changes, have a look to `app/css/material-custom-styles.css`.
+If you only want to do minor style changes, have a look to `app/themes/material/css/material-custom-styles.css`.
 
 This styling is not the most important work of this branding, but instead the integration with ALA and the brunch configuration that gives you the possibility to use modern javascript code and modern libraries or use `i18next`, for example.
-
-We have also a [clean branch](https://github.com/living-atlases/base-branding/tree/clean-skin) with only minor BS3 styling. This is useful when you already have a css/html style (for instance of your blog or main site) that you want to integrate with the new LA portal. See its [screenshots](https://github.com/living-atlases/base-branding/tree/clean-skin#screenshots).
 
 ## Structure
 
@@ -33,9 +32,17 @@ We have also a [clean branch](https://github.com/living-atlases/base-branding/tr
 │   │   ├── locales
 │   │   └── images
 │   ├── css              # put your css here
-│   ├── (...)
-│   └── js               # put your js code here
-│
+│   ├── js               # put your js code here
+│   └── themes
+│       ├── clean        # clean BS3 theme that you can select in settings.js
+│       │   ├── assets
+│       │   ├── js
+│       │   └── css
+│       │   (...)        # add your custom theme here
+│       └── material     # material-BS3 theme that you can select in settings.js
+│           ├── assets
+│           ├── css
+│           └── js
 ├──commonui-bs3-2019     # ALA branding as submodule
 │
 ├──node-modules          # 'yarn add module', to install
@@ -52,7 +59,7 @@ Brunch compiles in public your `js`/`css` and make this compatible with older br
 
 ## Basic settings
 
-See and edit `app/js/settings.js`.
+See and edit `app/js/settings.js` there you can select for instance the theme you want to use.
 
 ## Development
 
@@ -140,25 +147,27 @@ Pull Request welcome!
 
 ## Screenshots
 
+### Material theme
+
 Home page with stats:
 
 ![](https://raw.github.com/living-atlases/base-branding/master/la-base-index.png)
 
 Multilingual menu selection integrated with `grails` i18n:
 
-![](https://raw.github.com/living-atlases/base-branding/master/la-base-branding-collectory-i18n.png)
+![](https://raw.github.com/living-atlases/base-branding/master/screenshots/material/collectory-i18n.png)
 
 `CAS` Authentication links in drawer (and other configurable links):
 
-![](https://raw.github.com/living-atlases/base-branding/master/la-base-branding-drawer.png)
+![](https://raw.github.com/living-atlases/base-branding/master/screenshots/material/drawer.png)
 
 ALA Species autocompletion integrated and sticky footer:
 
-![](https://raw.github.com/living-atlases/base-branding/master/la-base-sticky-footer-autocomplete.png)
+![](https://raw.github.com/living-atlases/base-branding/master/screenshots/material/sticky-footer-autocomplete.png)
 
 Error page:
 
-![](https://raw.github.com/living-atlases/base-branding/master/error-page.png)
+![](https://raw.github.com/living-atlases/base-branding/master/screenshots/material/error-page.png)
 
 ## Error pages
 
@@ -174,6 +183,25 @@ or in Apache:
 ```
 ErrorDocument 503 https://l-a.site/errorPage.html, for instance;
 ```
+
+### Clean theme
+
+Home page with stats:
+
+![](https://raw.github.com/living-atlases/base-branding/master/screenshots/clean/index.png)
+
+`CAS` Authentication links in dropdown (and other configurable links):
+
+![](https://raw.github.com/living-atlases/base-branding/master/screenshots/clean/menu-auth-and-links.png)
+
+ALA Species autocompletion integrated and sticky footer:
+
+![](https://raw.github.com/living-atlases/base-branding/master/screenshots/clean/autocomplete.png)
+
+Error page:
+
+![](https://raw.github.com/living-atlases/base-branding/master/screenshots/clean/error.png)
+
 
 ## Caveats
 
