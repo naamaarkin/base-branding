@@ -1,10 +1,11 @@
 module.exports = {
   isDevel: true,
   inMante: false, // set to true and deploy if you want to set a maintenance message in all the services
-  enabledLangs: ['en', 'es', 'zh', 'sw'],
-  mainDomain: 'l-a.site', // used for cookies (without http/https)
-  mainLAUrl: 'https://l-a.site',
-  baseFooterUrl: 'https://l-a.site',
+  enabledLangs: ["en", "es", "zh", "sw"],
+  mainDomain: "l-a.site", // used for cookies (without http/https)
+  mainLAUrl: "https://l-a.site",
+  baseFooterUrl: "https://l-a.site",
+  theme: "material", // for now 'material' or 'clean' themes are available
   services: {
     collectory: { url: 'https://collections.l-a.site', title: 'Collections' },
     biocache: { url: 'https://biocache.l-a.site', title: 'Occurrence records' },

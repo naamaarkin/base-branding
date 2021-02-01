@@ -1,0 +1,16 @@
+/* Authentication menu items */
+#dropdown-auth-menu.signedIn > a.signUpBtn {
+  display: none;
+}
+
+#dropdown-auth-menu.signedOut > a.myProfileBtn {
+  display: none;
+}
+
+#dropdown-auth-menu.signedIn > a.loginBtn {
+  display: none;
+}
+
+#dropdown-auth-menu.signedOut > a.logoutBtn {
+  display: none;
+}

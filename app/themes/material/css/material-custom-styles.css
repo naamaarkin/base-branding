@@ -1,10 +1,10 @@
 body {
   margin: 0;
-  background-color: #F4F4F6 !important;
+  background-color: #f4f4f6 !important;
 }
 
 /* Disable ugly boxes around images in IE10 */
-a img{
+a img {
   border: 0px;
 }
 
@@ -31,7 +31,6 @@ a.mdl-navigation__link:hover {
   margin: 0 !important;
 }
 
-
 .mdl-textfield--expandable {
   width: auto;
 }
@@ -41,19 +40,17 @@ a.mdl-navigation__link:hover {
   right: 20%;
   bottom: -26px;
   z-index: 3;
-  color: #FFF !important;
+  color: #fff !important;
 }
 
 .la-mobile-title {
   display: none !important;
 }
 
-
 .la-logo-image {
   height: 28px;
   width: 140px;
 }
-
 
 .la-header {
   overflow: visible;
@@ -83,7 +80,7 @@ a.mdl-navigation__link:hover {
   order: 1;
   width: 500px;
   transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1),
-  width 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    width 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .la-navigation {
@@ -100,7 +97,6 @@ a.mdl-navigation__link:hover {
   width: 100px;
 }
 
-
 .la-navigation .mdl-navigation__link {
   display: inline-block;
   height: 60px;
@@ -110,7 +106,7 @@ a.mdl-navigation__link:hover {
 }
 
 .la-navigation .mdl-navigation__link:hover {
-  border-bottom: 4px solid rgb(255,171,64);
+  border-bottom: 4px solid rgb(255, 171, 64);
 }
 
 .la-search-box {
@@ -126,7 +122,6 @@ a.mdl-navigation__link:hover {
   -ms-flex-order: 3;
   order: 3;
 }
-
 
 .la-drawer {
   border-right: none;
@@ -144,7 +139,7 @@ a.mdl-navigation__link:hover {
 }
 
 .la-drawer span.mdl-navigation__link.mdl-navigation__link {
-  color: rgb(0,150,136);
+  color: rgb(0, 150, 136);
 }
 
 .la-drawer .mdl-layout-title {
@@ -161,14 +156,14 @@ a.mdl-navigation__link:hover {
   height: 800px;
   width: auto;
   background-color: #f3f3f3;
-  background: url('/images/slide01.jpg') center 30% no-repeat;
+  background: url("/images/slide01.jpg") center 30% no-repeat;
   background-size: cover;
 }
 
 .logo-font {
-  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   line-height: 1;
-  color: rgb(255,171,64);
+  color: rgb(255, 171, 64);
   font-weight: 500;
 }
 
@@ -232,7 +227,7 @@ a.mdl-navigation__link:hover {
 
 .la-slide3-section {
   position: relative;
-  background: url('/images/slide3.png') center top no-repeat;
+  background: url("/images/slide3.png") center top no-repeat;
   background-size: cover;
   height: 800px;
 }
@@ -259,7 +254,7 @@ a.mdl-navigation__link:hover {
 
 .la-link {
   text-decoration: none;
-  color: rgb(0,150,136)  !important;
+  color: rgb(0, 150, 136) !important;
 }
 
 .la-link:hover {
@@ -305,7 +300,7 @@ a.mdl-navigation__link:hover {
 }
 
 .la-customized-section-image {
-  background: url('/images/slide2.jpg') center top no-repeat;
+  background: url("/images/slide2.jpg") center top no-repeat;
   background-size: cover;
   height: 400px;
 }
@@ -361,13 +356,13 @@ a.mdl-navigation__link:hover {
 }
 
 .la-footer {
-  background-color: rgb(210,214,217);
+  background-color: rgb(210, 214, 217);
   color: gray;
   position: relative;
 }
 
 .la-footer a {
-  color:  rgb(0,150,136);
+  color: rgb(0, 150, 136);
 }
 
 .la-footer a:hover {
@@ -396,15 +391,12 @@ a.mdl-navigation__link:hover {
   top: 6px;
 }
 
-
 .la-link-menu:hover {
   cursor: pointer;
 }
 
-
 /**** Mobile layout ****/
 @media (max-width: 900px) {
-
   .la-mobile-title {
     font-size: 22px !important;
     margin-top: -3px;
@@ -491,13 +483,14 @@ a.mdl-navigation__link:hover {
 
 .la-drawer .mdl-layout-title,
 .la-fab {
-  background: rgb(0,150,136) !important;
+  background: rgb(0, 150, 136) !important;
 }
 
-.mdl-layout__title, .mdl-layout-title {
+.mdl-layout__title,
+.mdl-layout-title {
   font-size: 24px;
   font-weight: bold;
-  color: rgb(0,150,136);
+  color: rgb(0, 150, 136);
 }
 
 .la-drawer .mdl-layout-title {
@@ -505,19 +498,18 @@ a.mdl-navigation__link:hover {
   line-height: 1.5em;
   padding: 15px;
   height: auto;
-  color: #FFF;
+  color: #fff;
 }
 
 #main_biosearch_container {
-
 }
 
 #main_biosearch_form {
-  background: rgb(0,0,0,0.55);
+  background: rgb(0, 0, 0, 0.55);
 }
 
 #main_biosearch {
-  background-color: #FFF;
+  background-color: #fff;
   /* border-radius: 3px;
      border: 1px rgb(255,171,64) solid; */
   font-size: 20px;
@@ -535,7 +527,7 @@ a.mdl-navigation__link:hover {
 }
 
 a {
-  color: rgb(0,150,136);
+  color: rgb(0, 150, 136);
 }
 
 /* Size of top Nav buttons */
@@ -555,62 +547,65 @@ a {
   justify-content: space-between;
 }
 
-
 /* Fonts size smallers */
 
-h1,h2 {
-  font-weight: 400
+h1,
+h2 {
+  font-weight: 400;
 }
 
 h1 {
   font-size: 45px;
-  line-height: 48px
+  line-height: 48px;
 }
 
-h1,h2 {
-  margin: 24px 0
+h1,
+h2 {
+  margin: 24px 0;
 }
 
 h2 {
   font-size: 34px;
-  line-height: 40px
+  line-height: 40px;
 }
 
-h2,h3 {
-  font-weight: 400
+h2,
+h3 {
+  font-weight: 400;
 }
 
 h3 {
   font-size: 24px;
   line-height: 32px;
-  margin: 24px 0 16px
+  margin: 24px 0 16px;
 }
 
 h4 {
   font-size: 20px;
   font-weight: 500;
   line-height: 1;
-  letter-spacing: .02em
+  letter-spacing: 0.02em;
 }
 
 h5 {
   font-size: 16px;
-  letter-spacing: .04em
+  letter-spacing: 0.04em;
 }
 
 h6 {
   font-size: 14px;
-  letter-spacing: .04em
+  letter-spacing: 0.04em;
 }
 
-h6,p {
+h6,
+p {
   font-weight: 400;
-  line-height: 24px
+  line-height: 24px;
 }
 
 .mdl-mega-footer--right-section a .material-icons,
-.mdl-mega-footer--right-section a:hover .material-icons ,
-.mdl-mega-footer--right-section a:focus .material-icons ,
+.mdl-mega-footer--right-section a:hover .material-icons,
+.mdl-mega-footer--right-section a:focus .material-icons,
 .la-slide3-section a .material-icons,
 .la-slide3-section a:hover .material-icons,
 .la-slide3-section a:focus .material-icons {
@@ -632,7 +627,7 @@ h6,p {
 }
 
 .stats-group {
-  background: rgb(0,0,0,0.25);
+  background: rgb(0, 0, 0, 0.25);
 }
 
 .stats-title {
@@ -655,7 +650,6 @@ h6,p {
 #main_biosearch_form > div > div.form-group {
   margin-top: 10px;
 }
-
 
 /**** Mobile layout ****/
 @media (max-width: 900px) {
@@ -692,4 +686,10 @@ h6,p {
 }
 
 /* See: https://stackoverflow.com/a/45045071 */
-.modal-backdrop {z-index: 0;}
+.modal-backdrop {
+  z-index: 0;
+}
+
+#home-search {
+  color: white;
+}

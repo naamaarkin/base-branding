@@ -5,6 +5,10 @@
 
 const fs = require('fs');
 const settings = require('./app/js/settings.js');
+
+// Add your theme in app/themes and select it in app/js/settings.js theme property
+const theme = settings.theme;
+
 const toReplace = [/index\.html$/,      // index can be used as your main LA page
                    /errorPage\.html/,   // An error page that can be used in your infrastructure
                    /testPage\.html$/,   // testPate is just for text some headings, buttons, etc
@@ -21,13 +25,21 @@ const toReplaceOthers = [/banner\.html$/,
 exports.files = {
   javascripts: {
     joinTo: {
-      'js/vendor.js': /^(?!app)/, // Files that are not in `app/js` dir.
-      'js/app.js': /^app\/js/
+      'js/vendor.js': [ // Files that are not in `app/js` dir.
+         /^(?!app)/
+      ],
+      'js/app.js': [
+        'app/js/*js',
+        `app/themes/${theme}/js/*.js`
+      ]
     }
   },
   stylesheets: {
     joinTo: {
-      'css/app.css': /^app\/css/
+      'css/app.css': [
+         'app/css/*css',
+         `app/themes/${theme}/css/*.css`
+      ]
     }
   }
 };
@@ -45,8 +57,8 @@ exports.plugins = {
     // just copy ALA default builded files to our build
     // These are loaded by ala-bootstrap3 library, so we need to load manually in our development testPage
     'js': [ 'commonui-bs3-2019/build/js/'],
-    'material-lite': [ 'app/material-lite' ],
-    'custom-bootstrap': [ 'app/custom-bootstrap' ],
+    ...(theme == 'material' ? {'material-lite': [ 'app/themes/material/material-lite' ]}: {}),
+    ...(theme == 'material' ? {'custom-bootstrap': [ 'app/themes/material/custom-bootstrap' ]}: {}),
     'css': [ 'commonui-bs3-2019/build/css/' ],
     'fonts': 'commonui-bs3-2019/build/fonts/',
     verbose : false, // shows each file that is copied to the destination directory
@@ -57,21 +69,23 @@ exports.plugins = {
     replacements: [
       // Right now this file replacements are only done with `brunch build` and not via the watcher
       // So if you edit them, exec `brunch build` later
+      { files: toReplace, match: { find: 'INDEX_BODY', replace: () => {
+        return fs.readFileSync(`app/themes/${theme}/assets/indexBody.html`, 'utf8');
+      }}},
+      { files: toReplace, match: { find: 'TEST_BODY', replace: () => {
+        return fs.readFileSync(`app/themes/${theme}/assets/testBody.html`, 'utf8');
+      }}},
       { files: toReplace, match: { find: 'HEADLOCAL_HERE', replace: () => {
-        // console.log("Replacing local head");
-        return fs.readFileSync('app/assets/headLocal.html', 'utf8');
+        return fs.readFileSync(`app/themes/${theme}/assets/headLocal.html`, 'utf8');
       }}},
       { files: toReplace, match: { find: 'HEAD_HERE', replace: () => {
-        // console.log("Replacing head");
-        return fs.readFileSync('app/assets/head.html', 'utf8');
+        return fs.readFileSync(`app/themes/${theme}/assets/head.html`, 'utf8');
       }}},
       { files: toReplace, match: { find: 'BANNER_HERE', replace: () => {
-        // console.log("Replacing banner");
-        return fs.readFileSync('app/assets/banner.html', 'utf8');
+        return fs.readFileSync(`app/themes/${theme}/assets/banner.html`, 'utf8');
       }}},
       { files: toReplace, match: { find: 'FOOTER_HERE', replace: () => {
-        // console.log("Replacing footer");
-        return fs.readFileSync('app/assets/footer.html', 'utf8');
+        return fs.readFileSync(`app/themes/${theme}/assets/footer.html`, 'utf8');
       }}},
 
       // These replacements are done by
@@ -127,8 +141,8 @@ exports.plugins = {
 exports.conventions = {
   // file won't be compiled and will be just moved to public directory instead
   ignored: [
-    /^app\/material-lite/,
-    /^app\/custom-bootstrap/
+    ...(theme == 'material' ? [ /^app\/material-lite/ ] : []),
+    ...(theme == 'material' ? [ /^app\/custom-bootstrap/ ] : [])
   ]
 };
 
@@ -140,7 +154,7 @@ exports.server = {
 
 // FIXME, document this
 exports.paths = {
-  watched: ['app/js', 'app/css', 'app/assets' ]
+  watched: ['app/js', 'app/css', 'app/assets', `app/themes/${theme}/assets`, `app/themes/${theme}/css` ]
 };
 
 // https://brunch.io/docs/troubleshooting
