@@ -14,9 +14,9 @@ You can use this as a basis for a new LA infrastructure branding or just to see 
 
 ALA uses Bootstrap version 3 in most of their modules.
 
-This branding has currently several themes in `app/themes`. One is a `clean` Boostrap 3 theme that you can easy adapt to your site needs. This is useful when you already have a css/html style (for instance of your blog or main site) that you want to integrate with the new LA portal. 
+This branding has currently several themes in `app/themes`. One is a `clean` Boostrap 3 theme that you can easy adapt to your site needs. This is useful when you already have a css/html style (for instance of your blog or main site) that you want to integrate with the new LA portal. Based in this clean BS3 theme there are other customized versions using many of the https://bootswatch.com/3/ themes.
 
-Additionally we have a material-bootstrap theme in `app/themes/material` as a demostration of how to do a different look&feel to a LA portal. This `material` theme uses:
+Additionally we have a material-bootstrap theme in `app/themes/material` as a demostration of how to do a different look&feel to a LA portal with other js/css libs. This `material` theme uses:
 - Material Design Lite https://getmdl.io/ with a custom theme that you can https://getmdl.io/customize/index.html change, download and put instead of `app/themes/material/css/material.min.css`.
 - And experimentally also [Material Bootstrap Design](https://github.com/FezVrasta/bootstrap-material-design) to have similar style in the ALA modules.
 If you only want to do minor style changes, have a look to `app/themes/material/css/material-custom-styles.css`.

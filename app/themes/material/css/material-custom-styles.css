@@ -414,7 +414,7 @@ a.mdl-navigation__link:hover {
     display: block !important;
     position: absolute;
     /* left: calc(50% - 70px); */
-    top: 12px;
+    /* top: 12px; */
     transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   }
 

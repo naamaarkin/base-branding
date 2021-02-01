@@ -7,7 +7,15 @@ const fs = require('fs');
 const settings = require('./app/js/settings.js');
 
 // Add your theme in app/themes and select it in app/js/settings.js theme property
+//
+// Currently we have serveral themes:
+// - clean
+// - material
+// - flatly (based in clean + custom bootstrap)
+//
 const theme = settings.theme;
+const cleanBased = theme == 'flatly' || theme == 'superhero' || theme == 'yeti' || theme == 'cosmo' || theme == 'darkly' || theme == 'paper' || theme == 'sandstone' || theme == 'simplex' || theme == 'slate';
+const themeAssets = cleanBased || theme == 'clean'? 'clean': theme;
 
 const toReplace = [/index\.html$/,      // index can be used as your main LA page
                    /errorPage\.html/,   // An error page that can be used in your infrastructure
@@ -30,6 +38,7 @@ exports.files = {
       ],
       'js/app.js': [
         'app/js/*js',
+        ...( cleanBased ? [ 'app/themes/clean/js/*.js'  ] : []),
         `app/themes/${theme}/js/*.js`
       ]
     }
@@ -38,6 +47,7 @@ exports.files = {
     joinTo: {
       'css/app.css': [
          'app/css/*css',
+         ...(cleanBased ? [ 'app/themes/clean/css/*.css'  ] : []),
          `app/themes/${theme}/css/*.css`
       ]
     }
@@ -70,22 +80,22 @@ exports.plugins = {
       // Right now this file replacements are only done with `brunch build` and not via the watcher
       // So if you edit them, exec `brunch build` later
       { files: toReplace, match: { find: 'INDEX_BODY', replace: () => {
-        return fs.readFileSync(`app/themes/${theme}/assets/indexBody.html`, 'utf8');
+        return fs.readFileSync(`app/themes/${themeAssets}/assets/indexBody.html`, 'utf8');
       }}},
       { files: toReplace, match: { find: 'TEST_BODY', replace: () => {
-        return fs.readFileSync(`app/themes/${theme}/assets/testBody.html`, 'utf8');
+        return fs.readFileSync(`app/themes/${themeAssets}/assets/testBody.html`, 'utf8');
       }}},
       { files: toReplace, match: { find: 'HEADLOCAL_HERE', replace: () => {
-        return fs.readFileSync(`app/themes/${theme}/assets/headLocal.html`, 'utf8');
+        return fs.readFileSync(`app/themes/${themeAssets}/assets/headLocal.html`, 'utf8');
       }}},
       { files: toReplace, match: { find: 'HEAD_HERE', replace: () => {
-        return fs.readFileSync(`app/themes/${theme}/assets/head.html`, 'utf8');
+        return fs.readFileSync(`app/themes/${themeAssets}/assets/head.html`, 'utf8');
       }}},
       { files: toReplace, match: { find: 'BANNER_HERE', replace: () => {
-        return fs.readFileSync(`app/themes/${theme}/assets/banner.html`, 'utf8');
+        return fs.readFileSync(`app/themes/${themeAssets}/assets/banner.html`, 'utf8');
       }}},
       { files: toReplace, match: { find: 'FOOTER_HERE', replace: () => {
-        return fs.readFileSync(`app/themes/${theme}/assets/footer.html`, 'utf8');
+        return fs.readFileSync(`app/themes/${themeAssets}/assets/footer.html`, 'utf8');
       }}},
 
       // These replacements are done by
@@ -154,8 +164,12 @@ exports.server = {
 
 // FIXME, document this
 exports.paths = {
-  watched: ['app/js', 'app/css', 'app/assets', `app/themes/${theme}/assets`, `app/themes/${theme}/css` ]
+  watched: ['app/js', 'app/css', 'app/assets', `app/themes/${theme}/assets`, `app/themes/${theme}/css`,
+    `app/themes/${themeAssets}/assets`, `app/themes/${themeAssets}/css`
+]
 };
+
+
 
 // https://brunch.io/docs/troubleshooting
 exports.watcher = {
