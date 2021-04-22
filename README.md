@@ -71,6 +71,7 @@ This is using https://brunch.io instead of gulp and using [ALA commonui-bs3-2019
 # First use:
 
 git clone --recurse-submodule https://github.com/living-atlases/base-branding.git
+# if you cloned without the submodules: git submodule update --init --recursive # use --init only the fist time
 
 # install yarn with or similar:
 # https://classic.yarnpkg.com/en/docs/install/#debian-stable
