@@ -16,24 +16,26 @@ A LA compatible branding consist (currently) in a Bootstrap v3 footer and header
 
 In other words, we can have our custom html with our custom look & feel, image, menus, and still we need to put in our branding some common libs and resources that should be loaded by the ALA modules (like jquery and other js libs).
 
-Our strategy is to keep our brandings in sync with these dependencies easily. For this we just copy all that resources from the [ALA current branding](https://github.com/AtlasOfLivingAustralia/commonui-bs3-2019/) that is included in this repository as a submodule and their resources are copy on each build. With the same strategy the LA branding includes their [WP theme](https://github.com/AtlasOfLivingAustralia/commonui-bs3-2019/) as a submodule, so, if they change some css in the WP theme, their branding is also updated.
+Our strategy is to keep our brandings in sync with these dependencies easily. For this we just copy all that resources from the [ALA current branding](https://github.com/AtlasOfLivingAustralia/commonui-bs3-2019/) that is included in this repository as a [git submodule](https://github.com/living-atlases/base-branding/blob/master/.gitmodules) and their resources are [copy on each build](https://github.com/living-atlases/base-branding/blob/59f86493822c25ffef88d308b4a57470bc216b04/brunch-config.js#L66). With the same strategy the LA branding includes their [WP theme](https://github.com/AtlasOfLivingAustralia/commonui-bs3-2019/) as a submodule, so, if they change some css in the WP theme, their branding is also updated.
 
 ```
 This base branding ---- uses ---> ALA branding resources ---- uses ----> ALA WP theme resources
 ```
 
-For instance, to avoid conflicts, we only load js libs that are not used by ALA (like `i18next`) and we use the libs that ALA already include in their branding and software (as the jQuery lib).
+For instance, to avoid conflicts, we only load js libs that are not used by ALA (like `i18next` js lib) and we use the libs that ALA already include in their branding and software (as the jQuery lib or the Boostrap 3 framework and deps).
 
 The goal is also not to deal with [duplicate code and their problems](https://en.wikipedia.org/wiki/Duplicate_code).
 
 So if ALA fix some js error, or if add a new chart lib, or similar, we can include that changes in our build easily. 
 
-The branding also create some homepage, some test pages and a error page. But if you need some more complex homepage, and for instance, you need to use a CMS (like wordpress), our recommendation is that you can use a similar strategy to avoid the need of keed updated your LA branding and your CMS theme. So you can develop a common header/footer and css styling in your CMS, and include it in a fork of this sample branding. In summary:_
+The branding also create some homepage, some test pages and a error page. But if you need some more complex homepage, and for instance, you need to use a CMS (like wordpress), our recommendation is that you can use a similar strategy to avoid the need of keed updated your LA branding and your CMS theme. So you can develop a common header/footer and css styling in your CMS, and include it in a fork of this sample branding. In summary:
 
 ```
 Your branding ---- uses ---> ALA branding resources ---- uses ----> ALA WP theme resources
               `--- uses ---> you CMS theme resources
 ```
+
+Also in general we try not to mix libs versions like different Boostrap or jQuery versions.
 
 ## Styling
 
