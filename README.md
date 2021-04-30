@@ -39,6 +39,8 @@ So if for instance, you change a logo or a footer link in your CMS you can have 
 
 Also in general we try not to mix libs versions like different Boostrap or jQuery versions.
 
+Other strategy is to have an independent CMS theme with their own js/css and a simpler LA branding with a similar look a feel but using ALA libs (Bootstrap 3 ...).
+
 ## Styling
 
 ALA uses Bootstrap version 3 in most of their modules.
