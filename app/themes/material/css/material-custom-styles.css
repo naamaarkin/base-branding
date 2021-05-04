@@ -693,3 +693,8 @@ p {
 #home-search {
   color: white;
 }
+
+.mdl-layout__content {
+  scroll-behavior: smooth !important;
+}
+
