@@ -16,7 +16,6 @@ li.autocomplete-item {
   position: absolute;
   overflow: hidden;
   right: 30px;
-  top: 50px !important;
   padding-left: 5px;
 }
 
