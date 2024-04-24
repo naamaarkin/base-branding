@@ -1,3 +1,6 @@
 [submodule "commonui-bs3-2019"]
 	path = commonui-bs3-2019
 	url = https://github.com/AtlasOfLivingAustralia/commonui-bs3-2019
+[submodule "Bricks"]
+	path = Bricks
+	url = https://github.com/tom-gu/Bricks.git
