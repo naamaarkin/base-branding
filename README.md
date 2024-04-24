@@ -28,7 +28,7 @@ The goal is also not to deal with [duplicate code and their problems](https://en
 
 So if ALA fix some js error, or if add a new chart lib, or similar, we can include that changes in our build easily. 
 
-This is we include the ALA code in the [build process](https://github.com/living-atlases/base-branding/blob/a1204080896101b07ef769e273963f67d75e3291/brunch-config.js#L66):
+This is how the `base-branding` includes the ALA theme code in the [build process](https://github.com/living-atlases/base-branding/blob/a1204080896101b07ef769e273963f67d75e3291/brunch-config.js#L66):
 
 ![image](https://github.com/living-atlases/base-branding/assets/180085/fe465bc3-335a-42c0-a5c6-ff1d4823edf6)
 
