@@ -98,6 +98,10 @@ i18n.on('languageChanged', function (lng) {
     console.log(`On lang changed ${lng}`);
     // Store in the cookie the selection
     i18n.services.languageDetector.cacheUserLanguage(lng);
+    if(lng == "he"){
+      document.body.dir="rtl";
+      console.log("inside the change direction function");
+    }
   }
 });
 

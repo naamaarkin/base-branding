@@ -66,11 +66,11 @@ exports.plugins = {
   copycat: {
     // just copy ALA default builded files to our build
     // These are loaded by ala-bootstrap3 library, so we need to load manually in our development testPage
-    'js': [ 'commonui-bs3-2019/build/js/'],
+    'js': [ 'commonui-bs3-2019/build/js/', 'Dev-WP/public/wp-content/themes/bricks/assets/js/'],
     ...(theme == 'material' ? {'material-lite': [ 'app/themes/material/material-lite' ]}: {}),
     ...(theme == 'material' ? {'custom-bootstrap': [ 'app/themes/material/custom-bootstrap' ]}: {}),
-    'css': [ 'commonui-bs3-2019/build/css/' ],
-    'fonts': 'commonui-bs3-2019/build/fonts/',
+    'css': [ 'commonui-bs3-2019/build/css/','Dev-WP/public/wp-content/uploads/automatic-css/','Dev-WP/public/wp-content/uploads/bricks/css/' ],
+    'fonts': [ 'commonui-bs3-2019/build/fonts/','Dev-WP/public/wp-content/uploads/2024/03/'],
     verbose : false, // shows each file that is copied to the destination directory
     onlyChanged: true // only copy a file if it's modified time has changed (only effective when using brunch watch)
   },
