@@ -11,18 +11,19 @@
     "i18next-http-backend": "^1.0.21",
     "i18next-localstorage-cache": "^1.1.1",
     "jquery-i18next": "^1.2.1",
-    "js-cookie": "^2.2.1"
+    "js-cookie": "^2.2.1",
+    "yarn": "^1.22.21"
   },
   "devDependencies": {
-    "browser-sync-brunch": "^0.0.9",
-    "git-digest-brunch": "^1.0.3",
-    "jscc-brunch": "^2.10.0",
     "babel-brunch": "~6.0",
     "babel-preset-latest": "^6",
-    "brunch": "^2",
+    "browser-sync-brunch": "^0.0.9",
+    "brunch": "^2.10.17",
     "clean-css-brunch": "^2",
     "copycat-brunch": "^1.1.1",
     "fs": "^0.0.1-security",
+    "git-digest-brunch": "^1.0.3",
+    "jscc-brunch": "^2.10.0",
     "replacement-brunch": "^2.0.5",
     "uglify-js-brunch": "^2"
   },
