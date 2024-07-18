@@ -1,38 +1,27 @@
 module.exports = {
   isDevel: true,
   inMante: false, // set to true and deploy if you want to set a maintenance message in all the services
-  enabledLangs: ["en", "es", "zh", "sw"],
-  mainDomain: "l-a.site", // used for cookies (without http/https)
-  mainLAUrl: "https://l-a.site",
-  baseFooterUrl: "https://l-a.site",
-  theme: "simplex", // for now 'material', 'clean', 'superhero', 'yeti', 'cosmo', 'darkly', 'paper', 'sandstone', 'simplex', 'slate' or 'flatly' themes are available. See the last ones in: https://bootswatch.com/3/
+  enabledLangs: ['en', 'es', 'zh', 'sw'],
+  mainDomain: 'citizen-science.smnh.tau.ac.il', // used for cookies (without http/https)
+  mainLAUrl: 'https://citizen-science.smnh.tau.ac.il',
+  baseFooterUrl: 'https://branding.citizen-science.smnh.tau.ac.il/brand-2023',
+  theme: 'clean',
   services: {
-    collectory: { url: "https://collections.l-a.site", title: "Collections" },
-    biocache: { url: "https://biocache.l-a.site", title: "Occurrence records" },
-    biocacheService: {
-      url: "https://biocache-ws.l-a.site",
-      title: "Occurrence records webservice",
-    },
-    bie: { url: "https://species.l-a.site", title: "Species" },
+    collectory: { url: 'https://collections.citizen-science.smnh.tau.ac.il', title: 'Collections' },
+    biocache: { url: 'https://records.citizen-science.smnh.tau.ac.il', title: 'Occurrence records' },
+    biocacheService: { url: 'https://records-ws.citizen-science.smnh.tau.ac.il', title: 'Occurrence records webservice' },
+    bie: { url: 'https://species.citizen-science.smnh.tau.ac.il', title: 'Species' },
     // This bieService var is used by the search autocomplete. With your BIE
-    // service running and well indexed, you can put here your url
-    bieService: {
-      url: "https://bie.ala.org.au/ws",
-      title: "Species webservice",
-    },
-    regions: { url: "https://regions.l-a.site", title: "Regions" },
-    lists: { url: "https://lists.l-a.site", title: "Species List" },
-    spatial: { url: "https://spatial.l-a.site", title: "Spatial Portal" },
-    images: { url: "https://images.l-a.site", title: "Images Service" },
-    cas: { url: "https://auth.l-a.site", title: "CAS" },
+    bieService: { url: 'https://species-ws.citizen-science.smnh.tau.ac.il', title: 'Species webservice' },
+    regions: { url: 'https://regions.ala.org.au', title: 'Regions' },
+    lists: { url: 'https://lists.citizen-science.smnh.tau.ac.il', title: 'Species List' },
+    spatial: { url: 'https://spatial.citizen-science.smnh.tau.ac.il', title: 'Spatial Portal' },
+    images: { url: 'https://images.citizen-science.smnh.tau.ac.il', title: 'Images Service' },
+    cas: { url: 'https://auth.citizen-science.smnh.tau.ac.il', title: 'CAS' }
   },
   otherLinks: [
-    { title: "Datasets", url: "https://collections.l-a.site/datasets" },
-    {
-      title: "Explore your area",
-      url: "http://biocache.l-a.site/explore/your-area/",
-    },
-    { title: "Datasets", url: "https://collections.l-a.site/datasets" },
-    { title: "twitter", url: "", icon: "twitter" },
-  ],
-};
+    { title: 'Datasets', url: 'https://collections.citizen-science.smnh.tau.ac.il/datasets' },
+    { title: 'Explore your area', url: 'https://records.citizen-science.smnh.tau.ac.il/explore/your-area/' },
+    { title: 'twitter', url: '', icon: 'twitter' }
+  ]
+}

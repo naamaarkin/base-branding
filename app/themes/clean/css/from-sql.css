@@ -1,0 +1,141 @@
+@font-face{
+    font-family:'Narkiss Block';
+    font-weight:100;
+    font-display:swap;
+    src: url('../fonts/NarkissBlockNormal-VF.woff2') format('woff2');
+}
+
+@font-face{
+    font-family:'Narkiss Block';
+    font-weight:200;
+    font-display:swap;
+    src: url('../fonts/NarkissBlockNormal-VF.woff2') format('woff2');
+}
+
+@font-face{
+    font-family:'Narkiss Block';
+    font-weight:300;
+    font-display:swap;
+    src: url('../fonts/NarkissBlockNormal-VF.woff2') format('woff2');
+}
+
+@font-face{
+    font-family:'Narkiss Block';
+    font-weight:400;
+    font-display:swap;
+    src: url('../fonts/NarkissBlockNormal-VF.woff2') format('woff2');
+}
+
+@font-face{
+    font-family:'Narkiss Block';
+    font-weight:500;
+    font-display:swap;
+    src: url('../fonts/NarkissBlockNormal-VF.woff2') format('woff2');
+}
+
+@font-face{
+    font-family:'Narkiss Block';
+    font-weight:600;
+    font-display:swap;
+    src: url('../fonts/NarkissBlockNormal-VF.woff2') format('woff2');
+}
+
+@font-face{
+    font-family:'Narkiss Block';
+    font-weight:700;
+    font-display:swap;
+    src: url('../fonts/NarkissBlockNormal-VF.woff2') format('woff2');
+}
+
+@font-face{
+    font-family:'Narkiss Block';
+    font-weight:800;
+    font-display:swap;
+    src: url('../fonts/NarkissBlockNormal-VF.woff2') format('woff2');
+}
+
+@font-face{
+    font-family:'Narkiss Block';
+    font-weight:900;
+    font-display:swap;
+    src: url('../fonts/NarkissBlockNormal-VF.woff2') format('woff2');
+}
+
+.btn-dual-green .btn-dual__button-1 {
+    background-color: var(--action);
+}
+
+.btn-dual .btn-dual__button-1 {
+    margin-inline-end: -0.4rem;
+}
+
+.btn-dual__button-1 {
+    padding-top: 0.8rem;
+    padding-right: 1.2rem;
+    padding-bottom: 0.8rem;
+    padding-left: 1.2rem;
+    display: inline-flex;
+    color: white !important;
+    font-size: 1.8rem;
+    text-align: center;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 2.25rem;
+    font-family: "Narkiss Block";
+    border-radius: 62.4rem;
+}
+
+.btn-dual-green .btn-dual__button-2 {
+    background-color: var(--action);
+}
+
+.btn-dual .btn-dual__button-2 {
+    margin-inline-start: -0.4rem;
+}
+
+.btn-dual__button-2 {
+    border-radius: 99.9rem;
+    padding-top: 0.4rem;
+    padding-right: 1.2rem;
+    padding-bottom: 0.4rem;
+    padding-left: 1.2rem;
+    width: 3.9rem;
+    height: 3.9rem;
+    gap: 0px;
+}
+
+.btn-dual__button-2 i {
+    font-size: 1.4rem;
+}
+
+.btn-dual-green i {
+    color: white !important;
+}
+
+.pg-header h1{
+    font-family: "Narkiss Block";
+    color: #397CA3;
+    font-style: normal;
+    letter-spacing: -0.144rem;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.container .section{
+    align-items: normal;
+}
+
+.container-fluid .container{
+    padding-block: 0;
+}
+
+#sortWidgets select{
+    width: initial;
+    line-height: inherit;
+}
+
+.mail-form-heading{
+    color: white;
+    font-weight: 800;
+}
+                                                                                                                  
