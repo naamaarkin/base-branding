@@ -1,0 +1,1 @@
+/* BREAKPOINT: Desktop (BASE) */ .brxe-container {width: 1440px} .woocommerce main.site-main {width: 1440px} #brx-content.wordpress {width: 1440px}/* BREAKPOINT: Mobile portrait */@media (max-width: 478px) { .brxe-container {width: 1440px} .woocommerce main.site-main {width: 1440px} #brx-content.wordpress {width: 1440px}}
