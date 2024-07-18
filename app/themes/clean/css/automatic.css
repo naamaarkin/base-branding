@@ -9616,6 +9616,11 @@ section > div:where(:not(.bricks-shape-divider)) {
   align-items: flex-start;
   gap: var(--content-gap);
 }
+
+section > div:where(.row) {
+  align-items: normal;
+}
+
 section > div:where([class*="grid--"]), :where([class*="grid--"]) {
   gap: var(--grid-gap);
 }
@@ -9653,7 +9658,7 @@ section > div:where([class*="grid--"]), :where([class*="grid--"]) {
   font-size: clamp(1.4rem, calc(0.3571428571vw + 1.2857142857rem), 1.8rem);
   line-height: 1;
   font-weight: 400;
-  padding: 0.5em 1em;
+  padding: 0.5em 4em;
 }
 .form--dark .input::placeholder, .form--dark input:not([type="submit"])::placeholder, .form--dark select::placeholder, .form--dark textarea::placeholder, .form--dark .bricks-search-form .input::placeholder, .form--dark .bricks-search-form input:not([type="submit"])::placeholder, .form--dark .bricks-search-form select::placeholder, .form--dark .bricks-search-form textarea::placeholder, .form--dark .brxe-post-comments .input::placeholder, .form--dark .brxe-post-comments input:not([type="submit"])::placeholder, .form--dark .brxe-post-comments select::placeholder, .form--dark .brxe-post-comments textarea::placeholder {
   color: var(--neutral-ultra-light);

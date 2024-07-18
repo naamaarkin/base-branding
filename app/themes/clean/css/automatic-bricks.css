@@ -513,7 +513,7 @@ h6 {
   color: var(--h6-color, var(--heading-color));
 }
 body a {
-  color: var(--link-color, var(--action));
+  color: #404040;
   font-weight: var(--link-weight, inherit);
   -webkit-text-decoration: var(--link-decoration, inherit);
   text-decoration: var(--link-decoration, inherit);
