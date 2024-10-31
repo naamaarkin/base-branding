@@ -1,7 +1,7 @@
 <!-- included head -->
 <!-- Google Analytics: Put here your UA id -->
 <script>
-  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
   ga('create', 'UA-XXXXXXXX-1', 'auto');
   ga('send', 'pageview');
 </script>
@@ -9,157 +9,695 @@
 <!-- End Google Analytics -->
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+<title>Israel Center for Citizen Science</title>
 <meta name="robots" content="max-image-preview:large">
-<link rel="alternate" type="application/rss+xml" title="Israel Center for Citizen Science « פיד‏" href="https://cs-smnh.me/feed/">
-<link rel="alternate" type="application/rss+xml" title="Israel Center for Citizen Science « פיד תגובות‏" href="https://cs-smnh.me/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Israel Center for Citizen Science « פיד‏"
+  href="https://cs-smnh.me/feed/">
+<link rel="alternate" type="application/rss+xml" title="Israel Center for Citizen Science « פיד תגובות‏"
+  href="https://cs-smnh.me/comments/feed/">
+<link rel="stylesheet" id="automaticcss-core-css"
+  href="https://cs-smnh.me/wp-content/uploads/automatic-css/automatic.css?ver=1726125109" media="all">
+<style id="automaticcss-core-inline-css">
+  /* File: automatic-custom-css.css - Version: 3.0.7 - Generated: 2024-07-31 10:09:59 */
+</style>
+<link rel="stylesheet" id="automaticcss-gutenberg-css"
+  href="https://cs-smnh.me/wp-content/uploads/automatic-css/automatic-gutenberg.css?ver=1726125109" media="all">
 <style id="classic-theme-styles-inline-css">
-/*! This file is auto-generated */
-.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+  /**
+   * These rules are needed for backwards compatibility.
+   * They should match the button element rules in the base theme.json file.
+   */
+  .wp-block-button__link {
+    color: #ffffff;
+    background-color: #32373c;
+    border-radius: 9999px;
+    /* 100% causes an oval, but any explicit but really high value retains the pill shape. */
+
+    /* This needs a low specificity so it won't override the rules from the button element if defined in theme.json. */
+    box-shadow: none;
+    text-decoration: none;
+
+    /* The extra 2px are added to size solids the same as the outline versions.*/
+    padding: calc(0.667em + 2px) calc(1.333em + 2px);
+
+    font-size: 1.125em;
+  }
+
+  .wp-block-file__button {
+    background: #32373c;
+    color: #ffffff;
+    text-decoration: none;
+  }
 </style>
-<link rel="stylesheet" id="automaticcss-core-css" href="https://cs-smnh.me/wp-content/uploads/automatic-css/automatic.css?ver=1717331352" media="all">
-<link rel="stylesheet" id="bricks-frontend-css" href="https://cs-smnh.me/wp-content/themes/bricks/assets/css/frontend-light.min.css?ver=1717331352" media="all">
+<link rel="stylesheet" id="wpml-blocks-css"
+  href="https://cs-smnh.me/wp-content/plugins/sitepress-multilingual-cms/dist/css/blocks/styles.css?ver=4.6.13"
+  media="all">
+<link rel="stylesheet" id="wpml-legacy-horizontal-list-0-css"
+  href="https://cs-smnh.me/wp-content/plugins/sitepress-multilingual-cms/templates/language-switchers/legacy-list-horizontal/style.min.css?ver=1"
+  media="all">
+<link rel="stylesheet" id="bricks-frontend-css"
+  href="https://cs-smnh.me/wp-content/themes/bricks/assets/css/frontend-light.min.css?ver=1728831305" media="all">
 <style id="bricks-frontend-inline-css">
-@font-face{font-family:"Narkiss Block";font-weight:100;font-display:swap;src:url(https://cs-smnh.me/wp-content/uploads/2024/03/NarkissBlockNormal-VF.woff2) format("woff2");}@font-face{font-family:"Narkiss Block";font-weight:200;font-display:swap;src:url(https://cs-smnh.me/wp-content/uploads/2024/03/NarkissBlockNormal-VF.woff2) format("woff2");}@font-face{font-family:"Narkiss Block";font-weight:300;font-display:swap;src:url(https://cs-smnh.me/wp-content/uploads/2024/03/NarkissBlockNormal-VF.woff2) format("woff2");}@font-face{font-family:"Narkiss Block";font-weight:400;font-display:swap;src:url(https://cs-smnh.me/wp-content/uploads/2024/03/NarkissBlockNormal-VF.woff2) format("woff2");}@font-face{font-family:"Narkiss Block";font-weight:500;font-display:swap;src:url(https://cs-smnh.me/wp-content/uploads/2024/03/NarkissBlockNormal-VF.woff2) format("woff2");}@font-face{font-family:"Narkiss Block";font-weight:600;font-display:swap;src:url(https://cs-smnh.me/wp-content/uploads/2024/03/NarkissBlockNormal-VF.woff2) format("woff2");}@font-face{font-family:"Narkiss Block";font-weight:700;font-display:swap;src:url(https://cs-smnh.me/wp-content/uploads/2024/03/NarkissBlockNormal-VF.woff2) format("woff2");}@font-face{font-family:"Narkiss Block";font-weight:800;font-display:swap;src:url(https://cs-smnh.me/wp-content/uploads/2024/03/NarkissBlockNormal-VF.woff2) format("woff2");}@font-face{font-family:"Narkiss Block";font-weight:900;font-display:swap;src:url(https://cs-smnh.me/wp-content/uploads/2024/03/NarkissBlockNormal-VF.woff2) format("woff2");}
+  @font-face {
+    font-family: "Narkiss Block";
+    font-weight: 100;
+    font-display: swap;
+    src: url(https://cs-smnh.me/wp-content/uploads/2024/03/NarkissBlockNormal-VF.woff2) format("woff2");
+  }
 
+  @font-face {
+    font-family: "Narkiss Block";
+    font-weight: 200;
+    font-display: swap;
+    src: url(https://cs-smnh.me/wp-content/uploads/2024/03/NarkissBlockNormal-VF.woff2) format("woff2");
+  }
+
+  @font-face {
+    font-family: "Narkiss Block";
+    font-weight: 300;
+    font-display: swap;
+    src: url(https://cs-smnh.me/wp-content/uploads/2024/03/NarkissBlockNormal-VF.woff2) format("woff2");
+  }
+
+  @font-face {
+    font-family: "Narkiss Block";
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://cs-smnh.me/wp-content/uploads/2024/03/NarkissBlockNormal-VF.woff2) format("woff2");
+  }
+
+  @font-face {
+    font-family: "Narkiss Block";
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://cs-smnh.me/wp-content/uploads/2024/03/NarkissBlockNormal-VF.woff2) format("woff2");
+  }
+
+  @font-face {
+    font-family: "Narkiss Block";
+    font-weight: 600;
+    font-display: swap;
+    src: url(https://cs-smnh.me/wp-content/uploads/2024/03/NarkissBlockNormal-VF.woff2) format("woff2");
+  }
+
+  @font-face {
+    font-family: "Narkiss Block";
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://cs-smnh.me/wp-content/uploads/2024/03/NarkissBlockNormal-VF.woff2) format("woff2");
+  }
+
+  @font-face {
+    font-family: "Narkiss Block";
+    font-weight: 800;
+    font-display: swap;
+    src: url(https://cs-smnh.me/wp-content/uploads/2024/03/NarkissBlockNormal-VF.woff2) format("woff2");
+  }
+
+  @font-face {
+    font-family: "Narkiss Block";
+    font-weight: 900;
+    font-display: swap;
+    src: url(https://cs-smnh.me/wp-content/uploads/2024/03/NarkissBlockNormal-VF.woff2) format("woff2");
+  }
 </style>
-<link rel="stylesheet" id="bricks-child-css" href="https://cs-smnh.me/wp-content/themes/bricks-child/style.css?ver=1717331352" media="all">
-<link rel="stylesheet" id="bricks-frontend-rtl-css" href="https://cs-smnh.me/wp-content/themes/bricks/assets/css/frontend-rtl.min.css?ver=1717331352" media="all">
-<link rel="stylesheet" id="bricks-color-palettes-css" href="https://cs-smnh.me/wp-content/uploads/bricks/css/color-palettes.min.css?ver=1717331352" media="all">
-<link rel="stylesheet" id="bricks-theme-style-iccs_style-css" href="https://cs-smnh.me/wp-content/uploads/bricks/css/theme-style-iccs_style.min.css?ver=1717331352" media="all">
-<link rel="stylesheet" id="bricks-post-107-css" href="https://cs-smnh.me/wp-content/uploads/bricks/css/post-107.min.css?ver=1717331352" media="all">
-<link rel="stylesheet" id="bricks-post-2-css" href="https://cs-smnh.me/wp-content/uploads/bricks/css/post-2.min.css?ver=1717331352" media="all">
-<link rel="stylesheet" id="bricks-post-311-css" href="https://cs-smnh.me/wp-content/uploads/bricks/css/post-311.min.css?ver=1717331352" media="all">
-<link rel="stylesheet" id="bricks-font-awesome-6-brands-css" href="https://cs-smnh.me/wp-content/themes/bricks/assets/css/libs/font-awesome-6-brands.min.css?ver=1717331352" media="all">
-<link rel="stylesheet" id="bricks-font-awesome-6-css" href="https://cs-smnh.me/wp-content/themes/bricks/assets/css/libs/font-awesome-6.min.css?ver=1717331352" media="all">
-<link rel="stylesheet" id="automaticcss-bricks-css" href="https://cs-smnh.me/wp-content/uploads/automatic-css/automatic-bricks.css?ver=1717331352" media="all">
-<link rel="stylesheet" id="color-scheme-switcher-frontend-css" href="https://cs-smnh.me/wp-content/plugins/automaticcss-plugin/classes/Features/Color_Scheme_Switcher/css/frontend.css?ver=1717331352" media="all">
+<link rel="stylesheet" id="bricks-child-css"
+  href="https://cs-smnh.me/wp-content/themes/bricks-child/style.css?ver=1726125109" media="all">
+<link rel="stylesheet" id="bricks-frontend-rtl-css"
+  href="https://cs-smnh.me/wp-content/themes/bricks/assets/css/frontend-rtl.min.css?ver=1726125109" media="all">
+<link rel="stylesheet" id="bricks-color-palettes-css"
+  href="https://cs-smnh.me/wp-content/uploads/bricks/css/color-palettes.min.css?ver=1726125108" media="all">
+<link rel="stylesheet" id="bricks-theme-style-iccs_style-css"
+  href="https://cs-smnh.me/wp-content/uploads/bricks/css/theme-style-iccs_style.min.css?ver=1728572428" media="all">
+<link rel="stylesheet" id="bricks-post-107-css"
+  href="https://cs-smnh.me/wp-content/uploads/bricks/css/post-107.min.css?ver=1728945195" media="all">
+<link rel="stylesheet" id="bricks-post-2-css"
+  href="https://cs-smnh.me/wp-content/uploads/bricks/css/post-2.min.css?ver=1730275097" media="all">
+<link rel="stylesheet" id="bricks-post-311-css"
+  href="https://cs-smnh.me/wp-content/uploads/bricks/css/post-311.min.css?ver=1728286881" media="all">
+<link rel="stylesheet" id="bricks-font-awesome-6-brands-css"
+  href="https://cs-smnh.me/wp-content/themes/bricks/assets/css/libs/font-awesome-6-brands.min.css?ver=1726125109"
+  media="all">
+<link rel="stylesheet" id="bricks-font-awesome-6-css"
+  href="https://cs-smnh.me/wp-content/themes/bricks/assets/css/libs/font-awesome-6.min.css?ver=1726125109" media="all">
+<link rel="stylesheet" id="automaticcss-bricks-css"
+  href="https://cs-smnh.me/wp-content/uploads/automatic-css/automatic-bricks.css?ver=1726125109" media="all">
+<link rel="stylesheet" id="color-scheme-switcher-frontend-css"
+  href="https://cs-smnh.me/wp-content/plugins/automaticcss-plugin/classes/Features/Color_Scheme_Switcher/css/frontend.css?ver=1726125108"
+  media="all">
 <style id="bricks-frontend-inline-inline-css">
+  #bricks-header.scrolling .header_top {
+    display: none;
+  }
 
-/* BREAKPOINT: Desktop (BASE) */
-#bricks-header.scrolling .header_top {  display: none;}
+  .text--lang__switcher {
+    color: var(--base);
+    font-size: 1.6rem;
+    font-family: "Narkiss Block";
+    font-weight: 400;
+    font-style: normal;
+    align-self: center;
+    justify-content: center;
+    align-items: center
+  }
 
+  .text--lang__switcher a {
+    color: var(--base);
+  }
 
-/* BREAKPOINT: Desktop (BASE) */
-.h2-text {font-size: 4.8rem; font-family: "Narkiss Block"; font-weight: 800; line-height: 85%; letter-spacing: -0.048rem; color: var(--primary); padding-top: var(--space-s); padding-right: var(--space-s); padding-bottom: var(--space-s); padding-left: var(--space-s)}
+  .text--lang__switcher a {
+    padding-inline-end: 0px;
+  }
 
-/* BREAKPOINT: Mobile portrait */
-@media (max-width: 478px) {
-.h2-text {font-size: 3.2rem}
-}
+  .body-text {
+    color: var(--base);
+    font-size: 2rem;
+    font-family: "Narkiss Block";
+    font-weight: 400;
+    font-style: normal;
+    line-height: 125%;
+    display: flex;
+    flex-direction: column
+  }
 
-/* BREAKPOINT: Desktop (BASE) */
-.body-text {color: var(--base); font-size: 1.8rem; font-family: "Narkiss Block"; font-weight: 400; font-style: normal; line-height: 125%; display: flex}
-.body-text  a {color: var(--base); font-size: 1.8rem; font-family: "Narkiss Block"; font-weight: 400; font-style: normal; line-height: 125%; font-size: inherit}
+  .body-text a {
+    color: var(--base);
+    font-size: 2rem;
+    font-family: "Narkiss Block";
+    font-weight: 400;
+    font-style: normal;
+    line-height: 125%;
+    font-size: inherit
+  }
 
-/* BREAKPOINT: Mobile portrait */
-@media (max-width: 478px) {
-.body-text {padding-top: var(--space-xs); padding-right: var(--space-xs); padding-bottom: var(--space-xs); padding-left: var(--space-xs)}
-}
+  @media (max-width: 478px) {
+    .body-text {
+      padding-top: var(--space-xs);
+      padding-right: var(--space-xs);
+      padding-bottom: var(--space-xs);
+      padding-left: var(--space-xs);
+      font-size: 1.6rem
+    }
 
-/* BREAKPOINT: Desktop (BASE) */
-.btn-dual {display: flex}
-.btn-dual .btn-dual__button-1{	margin-inline-end: -0.4rem; } .btn-dual .btn-dual__button-2{	margin-inline-start: -0.4rem;} .btn-dual .btn-dual__button-1:hover{	margin-inline-end: -0.1rem; } .btn-dual .btn-dual__button-2:hover{	margin-inline-start: -0.1rem;}
+    .body-text a {
+      font-size: 1.6rem;
+      font-size: inherit
+    }
+  }
 
+  .h2-text {
+    font-size: 4.8rem;
+    font-family: "Narkiss Block";
+    font-weight: 800;
+    line-height: 85%;
+    letter-spacing: -0.048rem;
+    color: var(--primary);
+    padding-top: var(--space-s);
+    padding-right: var(--space-s);
+    padding-bottom: var(--space-s);
+    padding-left: var(--space-s)
+  }
 
-/* BREAKPOINT: Desktop (BASE) */
-.btn-dual-green .btn-dual__button-1{	background-color: var(--action);} .btn-dual-green .btn-dual__button-2{	background-color: var(--action);}
+  @media (max-width: 478px) {
+    .h2-text {
+      font-size: 3.2rem
+    }
+  }
 
+  .btn-dual {
+    display: flex
+  }
 
-/* BREAKPOINT: Desktop (BASE) */
-.btn-dual-green i {color: var(--white)}
-.btn-dual-green .btn-dual__button-1{	background-color: var(--action);} .btn-dual-green .btn-dual__button-2{	background-color: var(--action);}
+  .btn-dual .btn-dual__button-1 {
+    margin-inline-end: -0.95em;
+  }
 
+  .btn-dual .btn-dual__button-2 {
+    margin-inline-start: -0.95em;
+  }
 
-/* BREAKPOINT: Desktop (BASE) */
-.btn-dual__button-1 {padding-top: 0.8rem; padding-right: 1.2rem; padding-bottom: 0.8rem; padding-left: 1.2rem; display: inline-flex; color: var(--white); font-size: 1.8rem; text-align: center; font-weight: 400; font-style: normal; line-height: 2.25rem; font-family: "Narkiss Block"; border-radius: 62.4rem}
+  .btn-dual .btn-dual__button-1:hover {
+    margin-inline-end: -0.75em;
+  }
 
-/* BREAKPOINT: Mobile portrait */
-@media (max-width: 478px) {
-.btn-dual__button-1 {font-size: 1.6rem}
-}
+  .btn-dual .btn-dual__button-2:hover {
+    margin-inline-start: -0.75em;
+  }
 
-/* BREAKPOINT: Desktop (BASE) */
-.btn-dual__button-2 {border-radius: 99.9rem; padding-top: 0.4rem; padding-right: 1.2rem; padding-bottom: 0.4rem; padding-left: 1.2rem; width: 3.9rem; height: 3.9rem; gap: 0px}
-.btn-dual__button-2 i {font-size: 1.4rem}
+  .btn-dual:dir(rtl) .fa-arrow-right {
+    transform: scaleX(-1)
+  }
 
-/* BREAKPOINT: Mobile portrait */
-@media (max-width: 478px) {
-.btn-dual__button-2 i {font-size: 1.2rem}
-}
+  .btn-dual-green .btn-dual__button-1 {
+    background-color: var(--action);
+  }
 
-/* BREAKPOINT: Desktop (BASE) */
-.btn-dual-blue .btn-dual__button-1{	background-color: var(--primary);} .btn-dual-blue .btn-dual__button-2{	background-color: var(--primary);}
+  .btn-dual-green .btn-dual__button-2 {
+    background-color: var(--action);
+  }
 
+  .btn-dual-green i {
+    color: var(--white)
+  }
 
-/* BREAKPOINT: Desktop (BASE) */
-.text-counter {font-size: 4.8rem; font-family: "Narkiss Block"; font-weight: 200; color: var(--base); line-height: 100%; letter-spacing: 0.384rem}
+  .btn-dual-green .btn-dual__button-1 {
+    background-color: var(--action);
+  }
 
+  .btn-dual-green .btn-dual__button-2 {
+    background-color: var(--action);
+  }
 
-/* BREAKPOINT: Desktop (BASE) */
-.btn-dual-red .btn-dual__button-1{	background-color: var(--secondary);} .btn-dual-red .btn-dual__button-2{	background-color: var(--secondary);}
+  .btn-dual__button-1 {
+    padding-top: 0.8rem;
+    padding-right: 1.2rem;
+    padding-bottom: 0.8rem;
+    padding-left: 1.2rem;
+    display: inline-flex;
+    color: var(--white);
+    font-size: 1.8rem;
+    text-align: center;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 2.25rem;
+    font-family: "Narkiss Block";
+    border-radius: 62.4rem
+  }
 
+  @media (max-width: 478px) {
+    .btn-dual__button-1 {
+      font-size: 1.6rem
+    }
+  }
 
-/* BREAKPOINT: Desktop (BASE) */
-.btn-dual-red i {color: var(--white)}
-.btn-dual-red .btn-dual__button-1{	background-color: var(--secondary);} .btn-dual-red .btn-dual__button-2{	background-color: var(--secondary);}
+  .btn-dual__button-2 {
+    border-radius: 99.9rem;
+    padding-top: 0.4rem;
+    padding-right: 1.2rem;
+    padding-bottom: 0.4rem;
+    padding-left: 1.2rem;
+    width: 3.9rem;
+    height: 3.9rem;
+    gap: 0px
+  }
 
+  .btn-dual__button-2 i {
+    font-size: 1.4rem
+  }
 
-/* BREAKPOINT: Desktop (BASE) */
-.cs-project__card {border: 1px solid var(--bricks-color-ylbnsv); background-color: var(--white); display: flex; flex-direction: column; max-width: 326px; max-height: 661px}
-.cs-project__card .cs-project__card__img-frame{ outline: 2px dotted #EFF9F9; outline-offset: -16px;  border-radius: 3rem;} .cs-project__card:hover .cs-project__card__img-frame { outline: 6px dotted #EFF9F9; outline-offset: -16px;  border-radius: 3rem;}
+  .btn-dual__button-2:dir(rtl) .fa-arrow-right {
+    transform: scaleX(-1)
+  }
 
-/* BREAKPOINT: Mobile landscape */
-@media (max-width: 830px) {
-.cs-project__card {flex-direction: row}
-}
+  @media (max-width: 478px) {
+    .btn-dual__button-2 i {
+      font-size: 1.2rem
+    }
+  }
 
-/* BREAKPOINT: Desktop (BASE) */
-.cs-project__card__img-frame { outline: 2px dotted #EFF9F9; outline-offset: -16px;  border-radius: 3rem;}
+  .btn-dual-blue .btn-dual__button-1 {
+    background-color: var(--primary);
+  }
 
+  .btn-dual-blue .btn-dual__button-2 {
+    background-color: var(--primary);
+  }
 
-/* BREAKPOINT: Desktop (BASE) */
-.cs-project__card_title {font-size: 3.2rem; font-family: "Narkiss Block"; font-weight: 800; font-style: normal; line-height: 85%; color: var(--secondary); padding-bottom: var(--space-xs)}
+  .text-counter {
+    font-size: 4.8rem;
+    font-family: "Narkiss Block";
+    font-weight: 200;
+    color: var(--base);
+    line-height: 100%;
+    letter-spacing: 0.384rem
+  }
 
+  .btn-dual-red .btn-dual__button-1 {
+    background-color: var(--secondary);
+  }
 
-/* BREAKPOINT: Desktop (BASE) */
-.cs-project__card__text {color: var(--base); font-size: 1.8rem; font-family: "Narkiss Block"; font-weight: 400; font-style: normal; line-height: 125%}
+  .btn-dual-red .btn-dual__button-2 {
+    background-color: var(--secondary);
+  }
 
-/* BREAKPOINT: Mobile landscape */
-@media (max-width: 830px) {
-.cs-project__card__text {display: none}
-}
+  .btn-dual-red i {
+    color: var(--white)
+  }
 
-/* BREAKPOINT: Desktop (BASE) */
-.cs-project__card__tag .bricks-button {padding-top: 8px; padding-right: 4px; padding-bottom: 8px; padding-left: 4px; font-size: 1.6rem; font-family: "Narkiss Block"; font-weight: 400; font-style: normal; color: var(--base)}
+  .btn-dual-red .btn-dual__button-1 {
+    background-color: var(--secondary);
+  }
 
+  .btn-dual-red .btn-dual__button-2 {
+    background-color: var(--secondary);
+  }
 
-/* BREAKPOINT: Desktop (BASE) */
-.square-background {background-image: url(https://cs-smnh.me/wp-content/uploads/2024/04/grid_base.png); background-blend-mode: multiply; background-position: top left; background-repeat: repeat; background-size: 25px; flex-direction: row; justify-content: center; padding-top: var(--space-xs); padding-right: var(--space-xs); padding-bottom: var(--space-xs); padding-left: var(--space-xs); display: flex; align-items: center; align-self: center !important; flex-grow: 1}
+  .cs-project__card {
+    border: 1px solid var(--bricks-color-ylbnsv);
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    max-width: 32%;
+    align-self: stretch !important;
+    width: 100%
+  }
 
+  .cs-project__card .cs-project__card__img-frame {
+    outline: 2px dotted #EFF9F9;
+    outline-offset: -16px;
+    border-radius: 3rem;
+  }
 
-/* BREAKPOINT: Desktop (BASE) */
-.btn-dual-green-light .btn-dual__button-1{	background-color: var(--accent);} .btn-dual-green-light .btn-dual__button-2{	background-color: var(--accent);}
+  .cs-project__card:hover .cs-project__card__img-frame {
+    outline: 6px dotted #EFF9F9;
+    outline-offset: -16px;
+    border-radius: 3rem;
+  }
 
+  .cs-project__card:hover {
+    border-style: solid;
+    border-color: #5bc4bf;
+    border-width: 4px;
+  }
 
-/* BREAKPOINT: Desktop (BASE) */
-.btn-dual-green-light i {color: var(--white)}
-.btn-dual-green-light .btn-dual__button-1{	background-color: var(--accent);} .btn-dual-green-light .btn-dual__button-2{	background-color: var(--accent);}
+  @media (max-width: 830px) {
+    .cs-project__card {
+      flex-direction: row;
+      max-width: 75%
+    }
+  }
 
+  @media (max-width: 478px) {
+    .cs-project__card {
+      max-width: 90%
+    }
+  }
 
-/* BREAKPOINT: Desktop (BASE) */
-.footer-text-link {flex-direction: column; align-items: flex-start; justify-content: center; align-self: center; color: var(--shade); font-size: 1.8rem; font-family: "Narkiss Block"; font-weight: 400; font-style: normal; line-height: 2.5rem; text-align: right; min-width: 130px}
+  .cs-project__card__img-frame {
+    outline: 2px dotted #EFF9F9;
+    outline-offset: -16px;
+    border-radius: 3rem;
+  }
 
+  @media (max-width: 830px) {
+    .cs-project__card__img-frame {
+      justify-content: flex-start;
+      display: flex
+    }
+  }
 
+  .cs-project__card_img:not(.tag),
+  .cs-project__card_img img {
+    object-fit: cover
+  }
+
+  .cs-project__card_img {
+    height: 303px
+  }
+
+  .cs-project__card_text {
+    padding-top: var(--space-s);
+    padding-right: var(--space-s);
+    padding-bottom: var(--space-s);
+    padding-left: var(--space-s);
+    min-height: 270px
+  }
+
+  @media (max-width: 830px) {
+    .cs-project__card_text {
+      min-height: 100%
+    }
+  }
+
+  .cs-project__card_title {
+    font-size: 3.2rem;
+    font-family: "Narkiss Block";
+    font-weight: 800;
+    font-style: normal;
+    line-height: 85%;
+    color: var(--secondary);
+    padding-bottom: var(--space-xs)
+  }
+
+  .cs-project__card__text {
+    color: var(--base);
+    font-size: 1.8rem;
+    font-family: "Narkiss Block";
+    font-weight: 400;
+    font-style: normal;
+    line-height: 125%
+  }
+
+  @media (max-width: 830px) {
+    .cs-project__card__text {
+      display: none
+    }
+  }
+
+  .cs-project_tag-contianer {
+    flex-direction: row;
+    align-self: stretch !important;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 0.5rem;
+    row-gap: 0.5rem;
+    padding-top: var(--space-xs);
+    padding-right: var(--space-xs);
+    padding-bottom: var(--space-xs);
+    padding-left: var(--space-xs);
+    border-top: 1px solid var(--bricks-color-ylbnsv);
+    display: flex;
+    flex-wrap: wrap
+  }
+
+  .cs-project__card__tag .bricks-button {
+    font-size: 1.6rem;
+    font-family: "Narkiss Block";
+    font-weight: 400;
+    font-style: normal;
+    color: var(--base);
+    padding-top: 4px;
+    padding-right: 6px;
+    padding-bottom: 4px;
+    padding-left: 6px
+  }
+
+  .cs-project__card__tag {
+    gap: 5px
+  }
+
+  .cs-project__card-tag-color-green .bricks-button {
+    background-color: #bed2a3
+  }
+
+  .cs-project__card-tag-color-orange .bricks-button {
+    background-color: #eac9a3
+  }
+
+  .cs-project__card-tag-color-blue .bricks-button {
+    background-color: #b7d0de
+  }
+
+  .cs-project__card-tag-color-yello .bricks-button {
+    background-color: #f2e5a3
+  }
+
+  .cs-project__card-tag-color-red .bricks-button {
+    background-color: #ffa3a3
+  }
+
+  .cs-project__card-tag-color-purple .bricks-button {
+    background-color: #d5b5c5
+  }
+
+  .square-background {
+    background-image: url(https://cs-smnh.me/wp-content/uploads/2024/04/grid_base.png);
+    background-blend-mode: multiply;
+    background-position: top left;
+    background-repeat: repeat;
+    background-size: 25px;
+    flex-direction: row;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    align-self: center !important;
+    flex-grow: 1;
+    padding-right: var(--space-xs);
+    padding-bottom: var(--space-xs);
+    padding-left: var(--space-xs)
+  }
+
+  .btn-dual-green-light .btn-dual__button-1 {
+    background-color: var(--accent);
+  }
+
+  .btn-dual-green-light .btn-dual__button-2 {
+    background-color: var(--accent);
+  }
+
+  .btn-dual-green-light i {
+    color: var(--white)
+  }
+
+  .btn-dual-green-light .btn-dual__button-1 {
+    background-color: var(--accent);
+  }
+
+  .btn-dual-green-light .btn-dual__button-2 {
+    background-color: var(--accent);
+  }
+
+  .content__card {
+    max-width: 437px;
+    max-height: 700px;
+    background-color: var(--white);
+    border: 1px solid var(--bricks-color-ylbnsv);
+    min-height: 537px;
+    align-items: center;
+    align-self: stretch !important;
+    width: 100%;
+    column-gap: var(--space-s);
+    flex-direction: column
+  }
+
+  .content__card:hover .content__card__image {
+    padding: 0px;
+    border-radius: 0px;
+    height: 100%;
+  }
+
+  .content__card:hover .content__card__img-frame {
+    height: 280px;
+  }
+
+  .content__card:hover {
+    border-style: solid;
+    border-color: var(--accent);
+    border-width: 4px;
+  }
+
+  @media (max-width: 830px) {
+    .content__card {
+      min-height: 100%
+    }
+  }
+
+  @media (max-width: 360px) {
+    .content__card {
+      max-width: 300px
+    }
+  }
+
+  .content__card__img-frame {
+    width: 450px;
+    height: 303px;
+    border-bottom: 1px solid var(--bricks-color-ylbnsv)
+  }
+
+  @media (max-width: 830px) {
+    .content__card__img-frame {
+      display: flex;
+      justify-content: flex-start
+    }
+  }
+
+  .content__card__image {
+    padding-top: 16px;
+    padding-right: 16px;
+    padding-bottom: 16px;
+    padding-left: 16px;
+    width: 450px;
+    height: 303px;
+    border-radius: 30px
+  }
+
+  .content__card__image {
+    filter: grayscale(95%)
+  }
+
+  .content__card__text {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch !important;
+    width: 100%;
+    row-gap: 0px;
+    padding-top: var(--space-s);
+    padding-right: var(--space-s);
+    padding-bottom: var(--space-s);
+    padding-left: var(--space-s)
+  }
+
+  .content__card__title {
+    font-size: 3.2rem;
+    font-family: "Narkiss Block";
+    font-weight: 800;
+    font-style: normal;
+    line-height: 85%;
+    color: var(--accent);
+    padding-bottom: var(--space-xs)
+  }
+
+  .content__card__excerpt {
+    margin-left: 8px;
+    color: var(--base);
+    font-size: 1.8rem;
+    font-family: "Narkiss Block";
+    font-weight: 400;
+    font-style: normal;
+    line-height: 125%
+  }
+
+  @media (max-width: 830px) {
+    .content__card__excerpt {
+      display: none
+    }
+  }
+
+  .facebook_card-hover:hover {
+    border-style: solid;
+    border-color: var(--accent);
+    border-width: 4px;
+  }
+
+  .footer-text-link {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    align-self: center;
+    color: var(--shade);
+    font-size: 1.8rem;
+    font-family: "Narkiss Block";
+    font-weight: 400;
+    font-style: normal;
+    line-height: 2.5rem;
+    text-align: right;
+    min-width: 130px
+  }
 </style>
-<script id="color-scheme-switcher-frontend-js-extra">
-var acss = {"color_mode":"light","enable_client_color_preference":"false"};
+<script id="wpml-cookie-js-extra">
+  var wpml_cookies = { "wp-wpml_current_language": { "value": "he", "expires": 1, "path": "\/" } };
+  var wpml_cookies = { "wp-wpml_current_language": { "value": "he", "expires": 1, "path": "\/" } };
 </script>
-<script src="https://cs-smnh.me/wp-content/plugins/automaticcss-plugin/classes/Features/Color_Scheme_Switcher/js/frontend.min.js?ver=1717331352" id="color-scheme-switcher-frontend-js"></script>
-<link rel="https://api.w.org/" href="https://cs-smnh.me/wp-json/"><link rel="alternate" type="application/json" href="https://cs-smnh.me/wp-json/wp/v2/pages/2"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://cs-smnh.me/xmlrpc.php?rsd">
-<meta name="generator" content="WordPress 6.5.3">
+<script
+  src="https://cs-smnh.me/wp-content/plugins/sitepress-multilingual-cms/res/js/cookies/language-cookie.js?ver=4.6.13"
+  id="wpml-cookie-js" defer="" data-wp-strategy="defer"></script>
+<script id="color-scheme-switcher-frontend-js-extra">
+  var acss = { "color_mode": "light", "enable_client_color_preference": "false" };
+</script>
+<script
+  src="https://cs-smnh.me/wp-content/plugins/automaticcss-plugin/classes/Features/Color_Scheme_Switcher/js/frontend.min.js?ver=1726125108"
+  id="color-scheme-switcher-frontend-js"></script>
+<link rel="https://api.w.org/" href="https://cs-smnh.me/wp-json/">
+<link rel="alternate" title="JSON" type="application/json" href="https://cs-smnh.me/wp-json/wp/v2/pages/2">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://cs-smnh.me/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 6.6.2">
 <link rel="canonical" href="https://cs-smnh.me/">
 <link rel="shortlink" href="https://cs-smnh.me/">
-<link rel="alternate" type="application/json+oembed" href="https://cs-smnh.me/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcs-smnh.me%2F">
-<link rel="alternate" type="text/xml+oembed" href="https://cs-smnh.me/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcs-smnh.me%2F&amp;format=xml">
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed"
+  href="https://cs-smnh.me/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcs-smnh.me%2F">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed"
+  href="https://cs-smnh.me/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcs-smnh.me%2F&amp;format=xml">
+<meta name="generator" content="WPML ver:4.6.13 stt:5,1,20;">
 
 <!-- End included head -->
