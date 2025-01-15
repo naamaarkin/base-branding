@@ -27,7 +27,7 @@ const i18nOpts = {
   fallbackLng: {
     zh: ['en'],
     "sw-TZ": ['en'],
-    default: ['en']
+    default: ['he']
   },
   sendMissingTo: 'fallback',
   interpolation: {
@@ -93,15 +93,50 @@ i18nOpts.missingKeyHandler = function miss(lng, ns, key, defaultValue) {
   console.log(`"${key}": "${defaultValue}"`);
 };
 
+   // Function to switch logo
+   const updateLogo = (lng) => {
+    const logoSmnh = document.getElementById('smnh-logo');
+    const logoSmnhFooter = document.getElementById('smnh-logo-footer');
+    const logoICCS = document.getElementById('iccs-logo');
+
+    // Update the logo based on language
+    if (lng === 'en') {
+      logoSmnh.src = 'https://cs-smnh.me/wp-content/uploads/2024/10/SMNH_ENG.svg';
+      logoSmnhFooter.src = 'https://cs-smnh.me/wp-content/uploads/2024/10/SMNH_ENG.svg';
+      logoICCS.src = 'https://cs-smnh.me/wp-content/uploads/2024/10/iccs_eng-2.svg';
+    } else if (lng === 'he') {
+      logoSmnh.src = 'https://cs-smnh.me/wp-content/uploads/2024/04/NM_LOGO_MASTER.svg';
+      logoSmnhFooter.src = 'https://cs-smnh.me/wp-content/uploads/2024/04/NM_LOGO_MASTER.svg';
+      logoICCS.src = 'https://cs-smnh.me/wp-content/uploads/2024/04/ICSC_LOGO_HEB_VECTOR.svg';
+    }
+  };
+
+    // Function to update navigation links
+    const updateNavLinks = (lng) => {
+      const links = document.querySelectorAll('.wp-link');
+
+      links.forEach(link => {
+        const baseUrl = link.getAttribute('href').split('?')[0];  // Remove existing query params
+        link.href = `${baseUrl}?lang=${lng}`;
+      });
+    };
+
 i18n.on('languageChanged', function (lng) {
   if (i18n.services.languageDetector) {
     console.log(`On lang changed ${lng}`);
     // Store in the cookie the selection
     i18n.services.languageDetector.cacheUserLanguage(lng);
-    if(lng == "he"){
-      document.body.dir="rtl";
-      console.log("inside the change direction function");
-    }
+    document.documentElement.lang = lng;
+    updateLogo(lng);
+    updateNavLinks(lng);
+    // if(lng == "he"){
+    //   document.body.dir="rtl";
+    //   console.log("inside the he change direction function");
+    // }
+    // else if(lng == "en"){
+    //   document.body.dir="ltr";
+    //   console.log("inside the en change direction function");
+    // }
   }
 });
 
@@ -126,6 +161,8 @@ i18n.use(backend)
         console.log(`Lang clicked ${lang}`);
 
         i18n.changeLanguage(lang);
+        updateLogo(lang);
+        updateNavLinks(lang);
 
         // Change ?lang param and reload
         currentUrl.query.lang = lang;
