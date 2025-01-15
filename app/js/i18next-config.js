@@ -93,15 +93,36 @@ i18nOpts.missingKeyHandler = function miss(lng, ns, key, defaultValue) {
   console.log(`"${key}": "${defaultValue}"`);
 };
 
+   // Function to switch logo
+   const updateLogo = (lng) => {
+    const logoSmnh = document.getElementById('smnh-logo');
+    const logoICCS = document.getElementById('iccs-logo');
+
+    // Update the logo based on language
+    if (lng === 'en') {
+      logoSmnh.src = 'https://cs-smnh.me/wp-content/uploads/2024/10/SMNH_ENG.svg';
+      logoICCS.src = 'https://cs-smnh.me/wp-content/uploads/2024/10/iccs_eng-2.svg';
+    } else if (lng === 'he') {
+      logoSmnh.src = 'https://cs-smnh.me/wp-content/uploads/2024/04/NM_LOGO_MASTER.svg';
+      logoICCS.src = 'https://cs-smnh.me/wp-content/uploads/2024/04/ICSC_LOGO_HEB_VECTOR.svg';
+    }
+  };
+
 i18n.on('languageChanged', function (lng) {
   if (i18n.services.languageDetector) {
     console.log(`On lang changed ${lng}`);
     // Store in the cookie the selection
     i18n.services.languageDetector.cacheUserLanguage(lng);
-    if(lng == "he"){
-      document.body.dir="rtl";
-      console.log("inside the change direction function");
-    }
+    document.documentElement.lang = lng;
+    updateLogo(lng);
+    // if(lng == "he"){
+    //   document.body.dir="rtl";
+    //   console.log("inside the he change direction function");
+    // }
+    // else if(lng == "en"){
+    //   document.body.dir="ltr";
+    //   console.log("inside the en change direction function");
+    // }
   }
 });
 
@@ -126,6 +147,7 @@ i18n.use(backend)
         console.log(`Lang clicked ${lang}`);
 
         i18n.changeLanguage(lang);
+        updateLogo(lang);
 
         // Change ?lang param and reload
         currentUrl.query.lang = lang;

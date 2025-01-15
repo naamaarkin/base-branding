@@ -1,7 +1,7 @@
 module.exports = {
   isDevel: true,
   inMante: false, // set to true and deploy if you want to set a maintenance message in all the services
-  enabledLangs: ['en', 'es', 'zh', 'sw'],
+  enabledLangs: ['en', 'es', 'zh', 'sw', 'he'],
   mainDomain: 'cs-smnh.me', // used for cookies (without http/https)
   mainLAUrl: 'https://cs-smnh.me',
   baseFooterUrl: 'https://branding.cs-smnh.me/brand-2023',
