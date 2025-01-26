@@ -17,7 +17,7 @@ const backOpts = {
   crossDomain: true,
 }
 
-var currentUrl  = new Url;
+var currentUrl = new Url;
 
 const laSessionCookie = 'la-lang-session';
 
@@ -93,20 +93,32 @@ i18nOpts.missingKeyHandler = function miss(lng, ns, key, defaultValue) {
   console.log(`"${key}": "${defaultValue}"`);
 };
 
+// Function to switch logo
+const updateLogo = (lng) => {
+  const logoSmnh = document.getElementById('smnh-logo');
+  const logoICCS = document.getElementById('iccs-logo');
+  // Update the logo based on language
+  if (lng === 'en') {
+    logoSmnh.src = 'https://cs-smnh.me/wp-content/uploads/2024/10/SMNH_ENG.svg';
+    logoICCS.src = 'https://cs-smnh.me/wp-content/uploads/2024/10/iccs_eng-2.svg';
+  } else if (lng === 'he') {
+    logoSmnh.src = 'https://cs-smnh.me/wp-content/uploads/2024/04/NM_LOGO_MASTER.svg';
+    logoICCS.src = 'https://cs-smnh.me/wp-content/uploads/2024/04/ICSC_LOGO_HEB_VECTOR.svg';
+  }
+};
+
 i18n.on('languageChanged', function (lng) {
   if (i18n.services.languageDetector) {
     console.log(`On lang changed ${lng}`);
     // Store in the cookie the selection
     i18n.services.languageDetector.cacheUserLanguage(lng);
-    if(lng == "he"){
-      document.body.dir="rtl";
-      console.log("inside the change direction function");
-    }
+    document.documentElement.lang = lng;
+    updateLogo(lng);
   }
 });
 
-(function($) {
-i18n.use(backend)
+(function ($) {
+  i18n.use(backend)
     .use(lngDetector)
     .use(cache)
     .init(i18nOpts, (err, t) => {
@@ -116,30 +128,31 @@ i18n.use(backend)
         return;
       }
       console.log(`Language initialized: ${i18n.language}`);
-      jqueryI18next.init(i18n, $, { i18nName: 'i18next' } );
+      jqueryI18next.init(i18n, $, { i18nName: 'i18next' });
       console.log('jquery i18next initialized');
       $("body").localize();
 
-      $('.locale-link').on('click', function(e) {
+      $('.locale-link').on('click', function (e) {
         e.preventDefault();
         const lang = $(this).data('locale');
         console.log(`Lang clicked ${lang}`);
 
         i18n.changeLanguage(lang);
+        updateLogo(lang);
 
         // Change ?lang param and reload
         currentUrl.query.lang = lang;
         document.location.search = currentUrl.query;
       });
       // used in clean theme
-      if( $('#dropdown-lang').length ) {
+      if ($('#dropdown-lang').length) {
         $('#dropdown-lang').find('.dropdown-toggle').html(i18n.language + ' <span class="caret"></span>');
       }
 
       if (typeof Cookies.get(laSessionCookie) === 'undefined' && typeof currentUrl.query.lang === 'undefined') {
         // Workaround to set grails locale
         // This will use to do a unique lang redirect (to force grails to set the lang for the session)
-        var in30Minutes = 1/48;
+        var in30Minutes = 1 / 48;
         // grails default session lifetime is 30min
         Cookies.set(laSessionCookie, '/', { expires: in30Minutes });
         currentUrl.query.lang = i18n.language;

@@ -1,3 +1,36 @@
 #dropdown-lang > a {
   text-transform: uppercase;
 }
+
+#brxe-scgcyp{
+  padding-inline-start: var(--space-s);
+}
+#ar-switcher:lang(ar){
+  display: none;
+}
+#en-switcher:lang(en){
+  display: none;
+}
+#he-switcher:lang(he){
+  display: none;
+}
+
+body:lang(he){
+  direction: rtl;
+}
+
+body:lang(en){
+  direction: ltr;
+}
+
+#menu-item-1105:lang(en){
+  display: none;
+}
+
+#menu-item-3500:lang(en){
+  display: none;
+}
+
+#menu-item-163:lang(en){
+  display: none;
+}
