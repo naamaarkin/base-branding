@@ -97,12 +97,15 @@ i18nOpts.missingKeyHandler = function miss(lng, ns, key, defaultValue) {
 const updateLogo = (lng) => {
   const logoSmnh = document.getElementById('smnh-logo');
   const logoICCS = document.getElementById('iccs-logo');
+  const footerlogoSmnh = document.getElementById('footer-smnh-logo');
   // Update the logo based on language
   if (lng === 'en') {
     logoSmnh.src = 'https://cs-smnh.me/wp-content/uploads/2024/10/SMNH_ENG.svg';
+    footerlogoSmnh.src = 'https://cs-smnh.me/wp-content/uploads/2024/10/SMNH_ENG.svg';
     logoICCS.src = 'https://cs-smnh.me/wp-content/uploads/2024/10/iccs_eng-2.svg';
   } else if (lng === 'he') {
     logoSmnh.src = 'https://cs-smnh.me/wp-content/uploads/2024/04/NM_LOGO_MASTER.svg';
+    footerlogoSmnh.src = 'https://cs-smnh.me/wp-content/uploads/2024/04/NM_LOGO_MASTER.svg';
     logoICCS.src = 'https://cs-smnh.me/wp-content/uploads/2024/04/ICSC_LOGO_HEB_VECTOR.svg';
   }
 };
